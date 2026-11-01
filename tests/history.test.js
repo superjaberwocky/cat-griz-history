@@ -43,7 +43,7 @@ test('supplied archive imports every score pair and preserves yearly narratives'
         assert.equal(g.msuScore,row[`cats_score${suffix}`]);
         assert.equal(g.umScore,row[`griz_score${suffix}`]);
       }
-      assert.equal(g.location,null);
+      if (g.status === 'not-played') assert.equal(g.location,null);
       assert.ok(g.notes.length>0);
       assert.equal(g.notesScope,'year');
       assert.doesNotMatch(g.notes,/&(?:apos|#8220|#8221);/);
@@ -81,5 +81,20 @@ test('recent updates preserve separate meetings, locations, notes, and chronolog
   assert.match(recent[1].notes,/Caden Dowler/);
   assert.match(recent[2].notes,/197 yards/);
   assert.deepEqual(filterGames(archive.games,{search:'2025',sort:'oldest'}).map(g=>g.id),['2025-1','2025-2']);
-  assert.deepEqual(filterGames(archive.games,{venue:'Missoula'}).map(g=>g.id),['2025-1']);
+  assert.equal(filterGames(archive.games,{venue:'Missoula'})[0].id,'2025-1');
+});
+
+test('Wikipedia locations include neutral sites and resolve double-game years by scores',()=>{
+  const city = id => archive.games.find(g=>g.id===id).location;
+  assert.equal(city('1897-1'),'Bozeman');
+  assert.equal(city('1908-1'),'Missoula');
+  assert.equal(city('1908-2'),'Bozeman');
+  assert.equal(city('1909-2'),'Bozeman');
+  assert.equal(city('1909-1'),null);
+  assert.equal(city('1913-2'),null);
+  assert.equal(city('1926-1'),'Butte');
+  assert.equal(city('1950-1'),'Butte');
+  assert.equal(city('1951-1'),'Bozeman');
+  assert.ok(filterGames(archive.games,{venue:'Butte'}).every(g=>g.year>=1926 && g.year<=1950));
+  assert.ok(archive.games.filter(g=>g.status==='not-played').every(g=>g.location===null));
 });

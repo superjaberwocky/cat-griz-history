@@ -1,0 +1,881 @@
+{
+  "source": "https://en.wikipedia.org/wiki/Montana%E2%80%93Montana_State_football_rivalry#Game_results",
+  "retrieved": "2026-10-31",
+  "games": [
+    {
+      "number": 1,
+      "year": 1897,
+      "location": "Bozeman",
+      "msuScore": 6,
+      "umScore": 18
+    },
+    {
+      "number": 2,
+      "year": 1898,
+      "location": "Missoula",
+      "msuScore": 0,
+      "umScore": 6
+    },
+    {
+      "number": 3,
+      "year": 1898,
+      "location": "Missoula",
+      "msuScore": 0,
+      "umScore": 16
+    },
+    {
+      "number": 4,
+      "year": 1899,
+      "location": "Missoula",
+      "msuScore": 5,
+      "umScore": 0
+    },
+    {
+      "number": 5,
+      "year": 1899,
+      "location": "Missoula",
+      "msuScore": 38,
+      "umScore": 0
+    },
+    {
+      "number": 6,
+      "year": 1900,
+      "location": "Missoula",
+      "msuScore": 38,
+      "umScore": 0
+    },
+    {
+      "number": 7,
+      "year": 1901,
+      "location": "Missoula",
+      "msuScore": 31,
+      "umScore": 0
+    },
+    {
+      "number": 8,
+      "year": 1902,
+      "location": "Missoula",
+      "msuScore": 38,
+      "umScore": 0
+    },
+    {
+      "number": 9,
+      "year": 1903,
+      "location": "Missoula",
+      "msuScore": 13,
+      "umScore": 6
+    },
+    {
+      "number": 10,
+      "year": 1904,
+      "location": "Missoula",
+      "msuScore": 0,
+      "umScore": 79
+    },
+    {
+      "number": 11,
+      "year": 1908,
+      "location": "Missoula",
+      "msuScore": 0,
+      "umScore": 0
+    },
+    {
+      "number": 12,
+      "year": 1908,
+      "location": "Bozeman",
+      "msuScore": 5,
+      "umScore": 0
+    },
+    {
+      "number": 13,
+      "year": 1909,
+      "location": "Bozeman",
+      "msuScore": 0,
+      "umScore": 3
+    },
+    {
+      "number": 14,
+      "year": 1909,
+      "location": "Missoula",
+      "msuScore": 5,
+      "umScore": 15
+    },
+    {
+      "number": 15,
+      "year": 1910,
+      "location": "Bozeman",
+      "msuScore": 0,
+      "umScore": 0
+    },
+    {
+      "number": 16,
+      "year": 1910,
+      "location": "Missoula",
+      "msuScore": 0,
+      "umScore": 10
+    },
+    {
+      "number": 17,
+      "year": 1912,
+      "location": "Bozeman",
+      "msuScore": 0,
+      "umScore": 7
+    },
+    {
+      "number": 18,
+      "year": 1912,
+      "location": "Missoula",
+      "msuScore": 3,
+      "umScore": 39
+    },
+    {
+      "number": 19,
+      "year": 1913,
+      "location": "Bozeman",
+      "msuScore": 0,
+      "umScore": 7
+    },
+    {
+      "number": 20,
+      "year": 1913,
+      "location": "Missoula",
+      "msuScore": 7,
+      "umScore": 20
+    },
+    {
+      "number": 21,
+      "year": 1914,
+      "location": "Missoula",
+      "msuScore": 9,
+      "umScore": 26
+    },
+    {
+      "number": 22,
+      "year": 1916,
+      "location": "Bozeman",
+      "msuScore": 6,
+      "umScore": 6
+    },
+    {
+      "number": 23,
+      "year": 1917,
+      "location": "Missoula",
+      "msuScore": 7,
+      "umScore": 9
+    },
+    {
+      "number": 24,
+      "year": 1919,
+      "location": "Bozeman",
+      "msuScore": 6,
+      "umScore": 6
+    },
+    {
+      "number": 25,
+      "year": 1920,
+      "location": "Missoula",
+      "msuScore": 0,
+      "umScore": 28
+    },
+    {
+      "number": 26,
+      "year": 1921,
+      "location": "Bozeman",
+      "msuScore": 7,
+      "umScore": 14
+    },
+    {
+      "number": 27,
+      "year": 1922,
+      "location": "Missoula",
+      "msuScore": 6,
+      "umScore": 7
+    },
+    {
+      "number": 28,
+      "year": 1923,
+      "location": "Bozeman",
+      "msuScore": 13,
+      "umScore": 24
+    },
+    {
+      "number": 29,
+      "year": 1925,
+      "location": "Missoula",
+      "msuScore": 7,
+      "umScore": 28
+    },
+    {
+      "number": 30,
+      "year": 1926,
+      "location": "Butte",
+      "msuScore": 0,
+      "umScore": 27
+    },
+    {
+      "number": 31,
+      "year": 1927,
+      "location": "Butte",
+      "msuScore": 0,
+      "umScore": 6
+    },
+    {
+      "number": 32,
+      "year": 1928,
+      "location": "Butte",
+      "msuScore": 0,
+      "umScore": 0
+    },
+    {
+      "number": 33,
+      "year": 1929,
+      "location": "Butte",
+      "msuScore": 14,
+      "umScore": 12
+    },
+    {
+      "number": 34,
+      "year": 1930,
+      "location": "Butte",
+      "msuScore": 6,
+      "umScore": 13
+    },
+    {
+      "number": 35,
+      "year": 1931,
+      "location": "Butte",
+      "msuScore": 6,
+      "umScore": 37
+    },
+    {
+      "number": 36,
+      "year": 1932,
+      "location": "Butte",
+      "msuScore": 10,
+      "umScore": 7
+    },
+    {
+      "number": 37,
+      "year": 1933,
+      "location": "Butte",
+      "msuScore": 0,
+      "umScore": 32
+    },
+    {
+      "number": 38,
+      "year": 1934,
+      "location": "Butte",
+      "msuScore": 0,
+      "umScore": 25
+    },
+    {
+      "number": 39,
+      "year": 1935,
+      "location": "Butte",
+      "msuScore": 0,
+      "umScore": 20
+    },
+    {
+      "number": 40,
+      "year": 1936,
+      "location": "Butte",
+      "msuScore": 0,
+      "umScore": 27
+    },
+    {
+      "number": 41,
+      "year": 1937,
+      "location": "Butte",
+      "msuScore": 0,
+      "umScore": 19
+    },
+    {
+      "number": 42,
+      "year": 1938,
+      "location": "Butte",
+      "msuScore": 0,
+      "umScore": 13
+    },
+    {
+      "number": 43,
+      "year": 1939,
+      "location": "Butte",
+      "msuScore": 0,
+      "umScore": 6
+    },
+    {
+      "number": 44,
+      "year": 1940,
+      "location": "Butte",
+      "msuScore": 0,
+      "umScore": 6
+    },
+    {
+      "number": 45,
+      "year": 1941,
+      "location": "Butte",
+      "msuScore": 13,
+      "umScore": 23
+    },
+    {
+      "number": 46,
+      "year": 1946,
+      "location": "Butte",
+      "msuScore": 7,
+      "umScore": 20
+    },
+    {
+      "number": 47,
+      "year": 1947,
+      "location": "Butte",
+      "msuScore": 13,
+      "umScore": 12
+    },
+    {
+      "number": 48,
+      "year": 1948,
+      "location": "Butte",
+      "msuScore": 0,
+      "umScore": 14
+    },
+    {
+      "number": 49,
+      "year": 1949,
+      "location": "Butte",
+      "msuScore": 12,
+      "umScore": 34
+    },
+    {
+      "number": 50,
+      "year": 1950,
+      "location": "Butte",
+      "msuScore": 0,
+      "umScore": 33
+    },
+    {
+      "number": 51,
+      "year": 1951,
+      "location": "Bozeman",
+      "msuScore": 0,
+      "umScore": 38
+    },
+    {
+      "number": 52,
+      "year": 1952,
+      "location": "Missoula",
+      "msuScore": 12,
+      "umScore": 35
+    },
+    {
+      "number": 53,
+      "year": 1953,
+      "location": "Bozeman",
+      "msuScore": 13,
+      "umScore": 32
+    },
+    {
+      "number": 54,
+      "year": 1954,
+      "location": "Missoula",
+      "msuScore": 12,
+      "umScore": 25
+    },
+    {
+      "number": 55,
+      "year": 1955,
+      "location": "Bozeman",
+      "msuScore": 0,
+      "umScore": 19
+    },
+    {
+      "number": 56,
+      "year": 1956,
+      "location": "Missoula",
+      "msuScore": 33,
+      "umScore": 14
+    },
+    {
+      "number": 57,
+      "year": 1957,
+      "location": "Bozeman",
+      "msuScore": 22,
+      "umScore": 13
+    },
+    {
+      "number": 58,
+      "year": 1958,
+      "location": "Missoula",
+      "msuScore": 20,
+      "umScore": 6
+    },
+    {
+      "number": 59,
+      "year": 1959,
+      "location": "Bozeman",
+      "msuScore": 40,
+      "umScore": 6
+    },
+    {
+      "number": 60,
+      "year": 1960,
+      "location": "Missoula",
+      "msuScore": 6,
+      "umScore": 10
+    },
+    {
+      "number": 61,
+      "year": 1961,
+      "location": "Bozeman",
+      "msuScore": 10,
+      "umScore": 9
+    },
+    {
+      "number": 62,
+      "year": 1962,
+      "location": "Missoula",
+      "msuScore": 19,
+      "umScore": 36
+    },
+    {
+      "number": 63,
+      "year": 1963,
+      "location": "Bozeman",
+      "msuScore": 18,
+      "umScore": 3
+    },
+    {
+      "number": 64,
+      "year": 1964,
+      "location": "Missoula",
+      "msuScore": 30,
+      "umScore": 6
+    },
+    {
+      "number": 65,
+      "year": 1965,
+      "location": "Bozeman",
+      "msuScore": 24,
+      "umScore": 7
+    },
+    {
+      "number": 66,
+      "year": 1966,
+      "location": "Missoula",
+      "msuScore": 38,
+      "umScore": 0
+    },
+    {
+      "number": 67,
+      "year": 1967,
+      "location": "Bozeman",
+      "msuScore": 14,
+      "umScore": 8
+    },
+    {
+      "number": 68,
+      "year": 1968,
+      "location": "Missoula",
+      "msuScore": 29,
+      "umScore": 24
+    },
+    {
+      "number": 69,
+      "year": 1969,
+      "location": "Bozeman",
+      "msuScore": 6,
+      "umScore": 7
+    },
+    {
+      "number": 70,
+      "year": 1970,
+      "location": "Missoula",
+      "msuScore": 0,
+      "umScore": 35
+    },
+    {
+      "number": 71,
+      "year": 1971,
+      "location": "Bozeman",
+      "msuScore": 0,
+      "umScore": 30
+    },
+    {
+      "number": 72,
+      "year": 1972,
+      "location": "Missoula",
+      "msuScore": 21,
+      "umScore": 3
+    },
+    {
+      "number": 73,
+      "year": 1973,
+      "location": "Bozeman",
+      "msuScore": 33,
+      "umScore": 7
+    },
+    {
+      "number": 74,
+      "year": 1974,
+      "location": "Missoula",
+      "msuScore": 43,
+      "umScore": 29
+    },
+    {
+      "number": 75,
+      "year": 1975,
+      "location": "Bozeman",
+      "msuScore": 20,
+      "umScore": 3
+    },
+    {
+      "number": 76,
+      "year": 1976,
+      "location": "Missoula",
+      "msuScore": 21,
+      "umScore": 12
+    },
+    {
+      "number": 77,
+      "year": 1977,
+      "location": "Bozeman",
+      "msuScore": 24,
+      "umScore": 19
+    },
+    {
+      "number": 78,
+      "year": 1978,
+      "location": "Missoula",
+      "msuScore": 8,
+      "umScore": 24
+    },
+    {
+      "number": 79,
+      "year": 1979,
+      "location": "Bozeman",
+      "msuScore": 38,
+      "umScore": 21
+    },
+    {
+      "number": 80,
+      "year": 1980,
+      "location": "Missoula",
+      "msuScore": 24,
+      "umScore": 7
+    },
+    {
+      "number": 81,
+      "year": 1981,
+      "location": "Bozeman",
+      "msuScore": 17,
+      "umScore": 27
+    },
+    {
+      "number": 82,
+      "year": 1982,
+      "location": "Missoula",
+      "msuScore": 15,
+      "umScore": 45
+    },
+    {
+      "number": 83,
+      "year": 1983,
+      "location": "Bozeman",
+      "msuScore": 28,
+      "umScore": 8
+    },
+    {
+      "number": 84,
+      "year": 1984,
+      "location": "Missoula",
+      "msuScore": 34,
+      "umScore": 24
+    },
+    {
+      "number": 85,
+      "year": 1985,
+      "location": "Bozeman",
+      "msuScore": 41,
+      "umScore": 18
+    },
+    {
+      "number": 86,
+      "year": 1986,
+      "location": "Missoula",
+      "msuScore": 28,
+      "umScore": 59
+    },
+    {
+      "number": 87,
+      "year": 1987,
+      "location": "Bozeman",
+      "msuScore": 7,
+      "umScore": 55
+    },
+    {
+      "number": 88,
+      "year": 1988,
+      "location": "Missoula",
+      "msuScore": 3,
+      "umScore": 17
+    },
+    {
+      "number": 89,
+      "year": 1989,
+      "location": "Bozeman",
+      "msuScore": 2,
+      "umScore": 17
+    },
+    {
+      "number": 90,
+      "year": 1990,
+      "location": "Missoula",
+      "msuScore": 18,
+      "umScore": 35
+    },
+    {
+      "number": 91,
+      "year": 1991,
+      "location": "Bozeman",
+      "msuScore": 9,
+      "umScore": 16
+    },
+    {
+      "number": 92,
+      "year": 1992,
+      "location": "Missoula",
+      "msuScore": 17,
+      "umScore": 29
+    },
+    {
+      "number": 93,
+      "year": 1993,
+      "location": "Bozeman",
+      "msuScore": 30,
+      "umScore": 42
+    },
+    {
+      "number": 94,
+      "year": 1994,
+      "location": "Missoula",
+      "msuScore": 20,
+      "umScore": 55
+    },
+    {
+      "number": 95,
+      "year": 1995,
+      "location": "Bozeman",
+      "msuScore": 33,
+      "umScore": 42
+    },
+    {
+      "number": 96,
+      "year": 1996,
+      "location": "Missoula",
+      "msuScore": 14,
+      "umScore": 35
+    },
+    {
+      "number": 97,
+      "year": 1997,
+      "location": "Bozeman",
+      "msuScore": 25,
+      "umScore": 27
+    },
+    {
+      "number": 98,
+      "year": 1998,
+      "location": "Missoula",
+      "msuScore": 21,
+      "umScore": 28
+    },
+    {
+      "number": 99,
+      "year": 1999,
+      "location": "Bozeman",
+      "msuScore": 3,
+      "umScore": 49
+    },
+    {
+      "number": 100,
+      "year": 2000,
+      "location": "Missoula",
+      "msuScore": 3,
+      "umScore": 28
+    },
+    {
+      "number": 101,
+      "year": 2001,
+      "location": "Bozeman",
+      "msuScore": 27,
+      "umScore": 38
+    },
+    {
+      "number": 102,
+      "year": 2002,
+      "location": "Missoula",
+      "msuScore": 10,
+      "umScore": 7
+    },
+    {
+      "number": 103,
+      "year": 2003,
+      "location": "Bozeman",
+      "msuScore": 27,
+      "umScore": 20
+    },
+    {
+      "number": 104,
+      "year": 2004,
+      "location": "Missoula",
+      "msuScore": 22,
+      "umScore": 38
+    },
+    {
+      "number": 105,
+      "year": 2005,
+      "location": "Bozeman",
+      "msuScore": 16,
+      "umScore": 6
+    },
+    {
+      "number": 106,
+      "year": 2006,
+      "location": "Missoula",
+      "msuScore": 7,
+      "umScore": 13
+    },
+    {
+      "number": 107,
+      "year": 2007,
+      "location": "Bozeman",
+      "msuScore": 20,
+      "umScore": 41
+    },
+    {
+      "number": 108,
+      "year": 2008,
+      "location": "Missoula",
+      "msuScore": 3,
+      "umScore": 35
+    },
+    {
+      "number": 109,
+      "year": 2009,
+      "location": "Bozeman",
+      "msuScore": 19,
+      "umScore": 33
+    },
+    {
+      "number": 110,
+      "year": 2010,
+      "location": "Missoula",
+      "msuScore": 21,
+      "umScore": 16
+    },
+    {
+      "number": 111,
+      "year": 2011,
+      "location": "Bozeman",
+      "msuScore": 10,
+      "umScore": 36
+    },
+    {
+      "number": 112,
+      "year": 2012,
+      "location": "Missoula",
+      "msuScore": 16,
+      "umScore": 7
+    },
+    {
+      "number": 113,
+      "year": 2013,
+      "location": "Bozeman",
+      "msuScore": 14,
+      "umScore": 28
+    },
+    {
+      "number": 114,
+      "year": 2014,
+      "location": "Missoula",
+      "msuScore": 7,
+      "umScore": 34
+    },
+    {
+      "number": 115,
+      "year": 2015,
+      "location": "Bozeman",
+      "msuScore": 35,
+      "umScore": 54
+    },
+    {
+      "number": 116,
+      "year": 2016,
+      "location": "Missoula",
+      "msuScore": 24,
+      "umScore": 17
+    },
+    {
+      "number": 117,
+      "year": 2017,
+      "location": "Bozeman",
+      "msuScore": 31,
+      "umScore": 23
+    },
+    {
+      "number": 118,
+      "year": 2018,
+      "location": "Missoula",
+      "msuScore": 29,
+      "umScore": 25
+    },
+    {
+      "number": 119,
+      "year": 2019,
+      "location": "Bozeman",
+      "msuScore": 48,
+      "umScore": 14
+    },
+    {
+      "number": 120,
+      "year": 2021,
+      "location": "Missoula",
+      "msuScore": 10,
+      "umScore": 29
+    },
+    {
+      "number": 121,
+      "year": 2022,
+      "location": "Bozeman",
+      "msuScore": 55,
+      "umScore": 21
+    },
+    {
+      "number": 122,
+      "year": 2023,
+      "location": "Missoula",
+      "msuScore": 7,
+      "umScore": 37
+    },
+    {
+      "number": 123,
+      "year": 2024,
+      "location": "Bozeman",
+      "msuScore": 34,
+      "umScore": 11
+    },
+    {
+      "number": 124,
+      "year": 2025,
+      "location": "Missoula",
+      "msuScore": 31,
+      "umScore": 28
+    },
+    {
+      "number": 125,
+      "year": 2025,
+      "location": "Bozeman",
+      "msuScore": 48,
+      "umScore": 23
+    }
+  ]
+}

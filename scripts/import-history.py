@@ -26,12 +26,24 @@ for row in source['games']:
         })
 updates = json.loads((ROOT / 'data/source/updates.json').read_text())
 records.extend(updates['games'])
+locations = json.loads((ROOT / 'data/source/wikipedia-locations.json').read_text())
+for game in records:
+    if game['status'] != 'played':
+        continue
+    candidates = [row for row in locations['games'] if row['year'] == game['year']]
+    exact = [row for row in candidates if (row['msuScore'], row['umScore']) == (game['msuScore'], game['umScore'])]
+    cities = {row['location'] for row in (exact or candidates)}
+    if len(cities) == 1:
+        game['location'] = cities.pop()
+        game['locationSource'] = locations['source']
 archive = {
     'source': 'https://www.hypercrit.net/catgriz/',
     'sourceFile': 'source/cat-griz.json',
     'status': 'imported-from-user-supplied-source',
     'supplementalSourceFile': 'source/updates.json',
     'supplementalSource': updates['source'],
+    'locationSourceFile': 'source/wikipedia-locations.json',
+    'locationSource': locations['source'],
     'updatedThrough': max(row['year'] for row in records),
     'games': records,
 }
