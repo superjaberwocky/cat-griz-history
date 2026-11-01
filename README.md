@@ -50,3 +50,7 @@ Source narratives are retained without factual corrections, including possible i
 ## Remaining work
 
 Review the imported record and narrative accuracy against authoritative sources, resolve missing-year coverage, and add games after 2023 from documented sources. The JSON migration is complete; the live site's original code and interaction patterns have not been inspected.
+
+## GitHub Pages
+
+In the repository's **Settings → Pages → Build and deployment**, select **GitHub Actions** as the source. The `Deploy website to GitHub Pages` workflow tests, builds, and deploys `dist/` on pushes to `main`. You can also run it manually from the Actions tab after enabling Pages. The deployment job reports the live URL; the expected project address is https://superjaberwocky.github.io/cat-griz-history/.
