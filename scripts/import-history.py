@@ -24,11 +24,15 @@ for row in source['games']:
             'notes': html.unescape(row['narrative']).strip(),
             'notesScope': 'year',
         })
+updates = json.loads((ROOT / 'data/source/updates.json').read_text())
+records.extend(updates['games'])
 archive = {
     'source': 'https://www.hypercrit.net/catgriz/',
     'sourceFile': 'source/cat-griz.json',
     'status': 'imported-from-user-supplied-source',
-    'updatedThrough': max(row['year'] for row in source['games']),
+    'supplementalSourceFile': 'source/updates.json',
+    'supplementalSource': updates['source'],
+    'updatedThrough': max(row['year'] for row in records),
     'games': records,
 }
 (ROOT / 'data/games.json').write_text(json.dumps(archive, ensure_ascii=False, indent=2) + '\n')

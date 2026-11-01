@@ -33,7 +33,7 @@ const source = JSON.parse((await import('node:fs')).readFileSync(new URL('../dat
 test('supplied archive imports every score pair and preserves yearly narratives',()=>{
   validateGames(archive.games);
   assert.equal(source.games.length,119);
-  assert.equal(archive.games.length,127);
+  assert.equal(archive.games.length,130);
   for (const row of source.games) {
     const entries = archive.games.filter(g=>g.year===row.year);
     assert.equal(entries.length, Object.hasOwn(row,'cats_score_2') ? 2 : 1);
@@ -56,7 +56,7 @@ test('unplayed placeholders do not become ties, while real scoreless games do',(
   assert.deepEqual(unplayed.map(g=>g.year),[2020,1918,1915,1911]);
   assert.ok(unplayed.every(g=>g.msuScore===null && g.umScore===null));
   assert.deepEqual(summarize(unplayed),{msu:0,um:0,tie:0,total:0});
-  assert.deepEqual(summarize(archive.games),{msu:42,um:76,tie:5,total:123});
+  assert.deepEqual(summarize(archive.games),{msu:45,um:76,tie:5,total:126});
   assert.deepEqual(filterGames(archive.games,{team:'tie'}).map(g=>g.year),[1928,1919,1916,1910,1908]);
   assert.equal(filterGames(archive.games,{search:'pandemic'}).length,1);
   assert.ok(filterGames(archive.games,{sort:'margin'}).slice(-4).every(g=>g.status==='not-played'));
@@ -67,4 +67,19 @@ test('both meetings in 1898 are searchable and independently filterable',()=>{
   assert.deepEqual(entries.map(g=>g.umScore),[6,16]);
   assert.equal(filterGames(archive.games,{search:'1898',team:'msu'}).length,0);
   assert.equal(filterGames(archive.games,{search:'1898',team:'um'}).length,2);
+});
+
+test('recent updates preserve separate meetings, locations, notes, and chronology',()=>{
+  assert.equal(archive.updatedThrough,2025);
+  const recent = filterGames(archive.games).slice(0,3);
+  assert.deepEqual(recent.map(g=>[g.id,g.msuScore,g.umScore,g.location]),[
+    ['2025-2',48,23,'Bozeman'],['2025-1',31,28,'Missoula'],['2024-1',34,11,'Bozeman']
+  ]);
+  assert.ok(recent.every(g=>g.notesScope==='game'));
+  assert.match(recent[0].gameLabel,/Playoff rematch/);
+  assert.match(recent[0].notes,/449 total yards/);
+  assert.match(recent[1].notes,/Caden Dowler/);
+  assert.match(recent[2].notes,/197 yards/);
+  assert.deepEqual(filterGames(archive.games,{search:'2025',sort:'oldest'}).map(g=>g.id),['2025-1','2025-2']);
+  assert.deepEqual(filterGames(archive.games,{venue:'Missoula'}).map(g=>g.id),['2025-1']);
 });

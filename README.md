@@ -21,7 +21,7 @@ Deploy the generated `dist/` directory to a static host. The site uses relative 
 
 ## Historical data and sources
 
-**The supplied JSON has been imported.** The unchanged original is retained at `data/source/cat-griz.json`. Its 119 yearly records (1897–2023) produce 127 archive entries: 123 played games and four years explicitly described as not played. The calculated source totals are 42 Montana State wins, 76 Montana wins, and five ties. These are totals of the supplied file, not an independently verified official series record.
+**The supplied JSON has been imported.** The unchanged original is retained at `data/source/cat-griz.json`. Its 119 yearly records (1897–2023) produce 127 archive entries: 123 played games and four years explicitly described as not played. The original source totals are 42 Montana State wins, 76 Montana wins, and five ties. The project owner supplied three additional games in `data/source/updates.json`: 2024 (34–11), 2025 regular season (31–28), and the 2025 playoff rematch (48–23), all Montana State wins. The combined archive has 130 entries, 126 played games, 45 Montana State wins, 76 Montana wins, and five ties. These are totals of the supplied file, not an independently verified official series record.
 
 - Original archive: https://www.hypercrit.net/catgriz/
 - Montana State brand: https://www.montana.edu/brandtoolkit/
@@ -37,11 +37,11 @@ npm test
 npm run build
 ```
 
-The importer uses only the Python standard library. It expands each `_2` score pair into a separate game and decodes HTML entities into plain text. Narratives in two-game years describe the year collectively and are labeled accordingly on both cards; source score-pair order is preserved without inferring game dates.
+The importer uses only the Python standard library. It expands each `_2` score pair into a separate game and decodes HTML entities into plain text. Narratives in original two-game years describe the year collectively and are labeled accordingly on both cards; source score-pair order is preserved without inferring game dates.
 
 1911, 1915, 1918, and 2020 explicitly describe games not played. Their original 0–0 placeholders become `status: "not-played"` with null scores. They remain searchable and filterable but are excluded from series totals and ties. Actual scoreless ties are preserved. Largest-margin sorting places unplayed entries last.
 
-`data/games.json` contains source metadata and normalized entries. Each entry has a unique `id`, integer `year`, `status`, source game number, scores, nullable `location`, and plain-text `notes`. Dates and locations were not supplied as structured fields and are not inferred from narrative mentions. The location filter is disabled until locations are documented. Eight years absent from the source (1905–1907, 1924, 1942–1945) are not fabricated as entries. Coverage stops at 2023.
+`data/games.json` contains source metadata and normalized entries. Each entry has a unique `id`, integer `year`, `status`, source game number, scores, nullable `location`, and plain-text `notes`. Dates and historical locations were not supplied as structured fields and are not inferred from narrative mentions. The supplemental 2024–2025 records include the supplied cities, individual game narratives (`notesScope: "game"`), and meeting labels. These locations enable the location filter; older records retain unknown locations. The importer merges both source files so rerunning it preserves the updates. Eight years absent from the source (1905–1907, 1924, 1942–1945) are not fabricated as entries. Coverage extends through 2025, including the playoff rematch.
 
 Source narratives are retained without factual corrections, including possible inconsistencies in narrative/score ordering and championship descriptions. Their historical accuracy remains to be checked against authoritative records. The original file is preserved for that review.
 
@@ -49,7 +49,7 @@ Source narratives are retained without factual corrections, including possible i
 
 ## Remaining work
 
-Review the imported record and narrative accuracy against authoritative sources, resolve missing-year coverage, and add games after 2023 from documented sources. The JSON migration is complete; the live site's original code and interaction patterns have not been inspected.
+Review the imported record and narrative accuracy against authoritative sources, resolve missing-year coverage, and independently verify the owner-supplied 2024–2025 additions. The JSON migration is complete; the live site's original code and interaction patterns have not been inspected.
 
 ## GitHub Pages
 

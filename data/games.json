@@ -2,7 +2,9 @@
   "source": "https://www.hypercrit.net/catgriz/",
   "sourceFile": "source/cat-griz.json",
   "status": "imported-from-user-supplied-source",
-  "updatedThrough": 2023,
+  "supplementalSourceFile": "source/updates.json",
+  "supplementalSource": "Game results and narratives supplied by the project owner",
+  "updatedThrough": 2025,
   "games": [
     {
       "id": "1897-1",
@@ -1527,6 +1529,45 @@
       "location": null,
       "notes": "The Griz defeated the Cats en route to their appearance in the national championship.",
       "notesScope": "year"
+    },
+    {
+      "id": "2024-1",
+      "year": 2024,
+      "status": "played",
+      "sourceGame": 1,
+      "gamesInYear": 1,
+      "msuScore": 34,
+      "umScore": 11,
+      "location": "Bozeman",
+      "gameLabel": "Regular season",
+      "notes": "Montana State reclaimed the rivalry trophy in Bozeman behind Missoula native Adam Jones, who rushed for 197 yards and two touchdowns. Tommy Mellott added a rushing touchdown and a 35-yard touchdown pass to Rohan Jones as the Bobcats built a 20–3 halftime lead. MSU finished with 326 rushing yards and held Montana to 234 total yards. The victory completed the first 12–0 regular season in Bobcat history and secured the outright Big Sky championship with an 8–0 conference record.",
+      "notesScope": "game"
+    },
+    {
+      "id": "2025-1",
+      "year": 2025,
+      "status": "played",
+      "sourceGame": 1,
+      "gamesInYear": 2,
+      "msuScore": 31,
+      "umScore": 28,
+      "location": "Missoula",
+      "gameLabel": "Regular season",
+      "notes": "Montana State won a back-and-forth battle in Missoula to claim the outright Big Sky championship and hand Montana its first loss of the season. Caden Dowler’s 34-yard interception return for a touchdown put the Bobcats ahead 24–21 late in the third quarter. After Zac Crews blocked a potential tying field goal, Justin Lamson’s 23-yard touchdown run extended the lead. Montana’s Eli Gillman answered with a 52-yard scoring run, but MSU controlled the remaining possession to seal its first victory in Missoula since 2018.",
+      "notesScope": "game"
+    },
+    {
+      "id": "2025-2",
+      "year": 2025,
+      "status": "played",
+      "sourceGame": 2,
+      "gamesInYear": 2,
+      "msuScore": 48,
+      "umScore": 23,
+      "location": "Bozeman",
+      "gameLabel": "Playoff rematch · FCS semifinal",
+      "notes": "The rivals met again four weeks later in an FCS semifinal in Bozeman. Montana erased a 20–3 deficit to take a 23–20 third-quarter lead, but Montana State scored the final 28 points, including 21 in the fourth quarter, to advance to the national championship game. Justin Lamson passed for 209 yards and two touchdowns, Adam Jones rushed for 131 yards and two scores, and Taco Dowler caught five passes for 125 yards. The Bobcats finished with 449 total yards to Montana’s 347.",
+      "notesScope": "game"
     }
   ]
 }
