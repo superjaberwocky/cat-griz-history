@@ -27,6 +27,30 @@ for (const name of names) {
   if (params.has(name)) field.value = params.get(name);
   if (name === 'sort' && !field.value) field.value = 'newest';
 }
+const results = document.querySelector('#results');
+let layoutFrame;
+function layoutCards() {
+  cancelAnimationFrame(layoutFrame);
+  layoutFrame = requestAnimationFrame(() => {
+    const cards = [...results.querySelectorAll('.game-card')];
+    if (!cards.length) { results.style.height = ''; return; }
+    const styles = getComputedStyle(results);
+    const columns = Number(styles.getPropertyValue('--columns')) || 1;
+    const gap = parseFloat(styles.getPropertyValue('--gap')) || 24;
+    const width = (results.clientWidth - gap * (columns - 1)) / columns;
+    const heights = Array(columns).fill(0);
+    for (const card of cards) {
+      card.style.width = `${width}px`;
+      const column = heights.indexOf(Math.min(...heights));
+      card.style.left = `${column * (width + gap)}px`;
+      card.style.top = `${heights[column]}px`;
+      heights[column] += card.offsetHeight + gap;
+    }
+    results.style.height = `${Math.max(...heights) - gap}px`;
+  });
+}
+const cardObserver = new ResizeObserver(layoutCards);
+new ResizeObserver(layoutCards).observe(results);
 function render(sync = true) {
   const values = Object.fromEntries(new FormData(form));
   const filtered = filterGames(games, values);
@@ -36,6 +60,12 @@ function render(sync = true) {
     if (result === 'not-played') return `<article class="game-card not-played"><div class="card-top"><span>${g.year}</span><span class="badge">NOT PLAYED</span></div><h3>A pause in the rivalry</h3><p class="interruption-note">${escape(g.notes)}</p></article>`;
     return `<article class="game-card ${result}"><div class="card-top"><span>${g.year}</span><span class="badge">${result === 'tie' ? 'TIE GAME' : result === 'msu' ? 'BOBCAT WIN' : 'GRIZZLY WIN'}</span></div><p class="location">${g.gamesInYear > 1 ? `Game ${g.sourceGame} of ${g.gamesInYear} · ` : ''}${g.gameLabel ? `${escape(g.gameLabel)} · ` : ''}${escape(g.location || 'Location not recorded')}${g.date ? ` · ${escape(g.date)}` : ''}</p><div class="score ${result === 'msu' ? 'winning' : ''}"><span>Montana State <small>BOBCATS</small></span><strong>${g.msuScore}</strong></div><div class="score ${result === 'um' ? 'winning' : ''}"><span>Montana <small>GRIZZLIES</small></span><strong>${g.umScore}</strong></div>${g.notes ? `<details><summary>${g.notesScope === 'year' && g.gamesInYear > 1 ? 'Year notes (shared by both games)' : 'Game notes'}</summary><p>${escape(g.notes)}</p></details>` : ''}</article>`;
   }).join('');
+  cardObserver.disconnect();
+  results.querySelectorAll('.game-card').forEach((card, index) => {
+    card.style.setProperty('--entrance-delay', `${Math.min(index, 6) * 35}ms`);
+    cardObserver.observe(card);
+  });
+  layoutCards();
   if (sync) {const p = new URLSearchParams(); for(const [k,v] of Object.entries(values)) if(v && !(k==='sort'&&v==='newest')) p.set(k,v); history.replaceState(null,'',`${location.pathname}${p.size?'?'+p:''}${location.hash}`);}
 }
 form.addEventListener('input', ()=>render());
