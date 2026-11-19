@@ -21,6 +21,18 @@ test('series totals distinguish both schools and ties',()=>{
   assert.deepEqual(summarize(games),{msu:1,um:1,tie:1,total:3});
   assert.deepEqual(summarize([]),{msu:0,um:0,tie:0,total:0});
 });
+test('shutouts include either winner and exclude scoreless ties and unplayed games',()=>{
+  const bobcatWin = {id:'bobcat-win',year:2002,msuScore:3,umScore:0};
+  const scorelessTie = {id:'scoreless-tie',year:2003,msuScore:0,umScore:0};
+  const unplayed = {id:'unplayed',year:2004,status:'not-played',msuScore:null,umScore:null};
+  const results = [...games,bobcatWin,scorelessTie,unplayed];
+  assert.deepEqual(filterGames(results,{shutout:'yes'}),[games[1],bobcatWin]);
+  assert.deepEqual(filterGames(results,{shutout:'yes',team:'msu'}),[bobcatWin]);
+  assert.deepEqual(filterGames(results,{shutout:'yes',sort:'smallest-margin'}),[bobcatWin,games[1]]);
+  assert.deepEqual(filterGames(results,{sort:'smallest-margin'}),[
+    bobcatWin,games[0],games[1],scorelessTie,games[2],unplayed
+  ]);
+});
 test('import validation rejects duplicate games and invalid scores',()=>{
   assert.equal(validateGames(games),games);
   assert.throws(()=>validateGames([games[0],games[0]]),/unique/);

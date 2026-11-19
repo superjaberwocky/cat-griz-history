@@ -2,17 +2,31 @@ export function winner(game) {
   if (game.status === 'not-played') return 'not-played';
   return game.msuScore === game.umScore ? 'tie' : game.msuScore > game.umScore ? 'msu' : 'um';
 }
-export function filterGames(games, { search = '', team = '', decade = '', venue = '', sort = 'newest' } = {}) {
+function victoryMargin(game) {
+  return Math.abs(game.msuScore - game.umScore);
+}
+
+export function filterGames(games, { search = '', team = '', decade = '', venue = '', shutout = '', sort = 'newest' } = {}) {
   const query = search.trim().toLowerCase();
   return games.filter(g => (!team || winner(g) === team)
     && (!decade || Math.floor(g.year / 10) * 10 === Number(decade))
     && (!venue || g.location === venue)
+    && (shutout !== 'yes' || (g.status !== 'not-played' && ((g.msuScore === 0) !== (g.umScore === 0))))
     && (!query || [g.year, g.date, g.location, g.notes, g.msuScore, g.umScore].join(' ').toLowerCase().includes(query)))
-    .sort((a, b) => (sort === 'margin' && (a.status === 'not-played' || b.status === 'not-played'))
-      ? Number(a.status === 'not-played') - Number(b.status === 'not-played') || b.year - a.year
-      : sort === 'oldest' ? a.year - b.year || (a.date || '').localeCompare(b.date || '') || (a.sourceGame || 1) - (b.sourceGame || 1)
-      : sort === 'margin' ? Math.abs(b.msuScore - b.umScore) - Math.abs(a.msuScore - a.umScore) || b.year - a.year
-      : b.year - a.year || (b.date || '').localeCompare(a.date || '') || (b.sourceGame || 1) - (a.sourceGame || 1));
+    .sort((a, b) => {
+      if (sort === 'margin' || sort === 'smallest-margin') {
+        const unplayedOrder = Number(a.status === 'not-played') - Number(b.status === 'not-played');
+        const byYear = b.year - a.year;
+        if (unplayedOrder || a.status === 'not-played') return unplayedOrder || byYear;
+        const aMargin = victoryMargin(a);
+        const bMargin = victoryMargin(b);
+        if (sort === 'margin') return bMargin - aMargin || byYear;
+        return Number(aMargin === 0) - Number(bMargin === 0) || aMargin - bMargin || byYear;
+      }
+      return sort === 'oldest'
+        ? a.year - b.year || (a.date || '').localeCompare(b.date || '') || (a.sourceGame || 1) - (b.sourceGame || 1)
+        : b.year - a.year || (b.date || '').localeCompare(a.date || '') || (b.sourceGame || 1) - (a.sourceGame || 1);
+    });
 }
 export function summarize(games) {
   return games.reduce((s, g) => { if (g.status !== 'not-played') { s[winner(g)]++; s.total++; } return s; }, { msu: 0, um: 0, tie: 0, total: 0 });
