@@ -128,3 +128,27 @@ test('game weather follows the matched dates, including the playoff rematch', ()
   assert.ok(archive.games.filter(game => game.weather).every(game => game.date && game.location));
   assert.equal(archive.games.find(game => game.id === '1919-2').weather, undefined);
 });
+
+test('multiple values in one facet combine with other facets and inclusive ranges', () => {
+  assert.deepEqual(filterGames(games, {
+    team: ['msu', 'tie'],
+    decade: ['2000', '2010'],
+    venue: ['Bozeman'],
+    yearMin: '2000',
+    yearMax: '2001',
+    pointsMin: '14',
+    pointsMax: '17',
+    umScoreMin: '7',
+    marginMax: '3',
+  }), [games[2], games[0]]);
+  assert.deepEqual(filterGames(games, { marginMax: '0' }), [games[2]]);
+});
+
+test('score ranges exclude unplayed years and score sorts order the matching games', () => {
+  const unplayed = { id: 'unplayed', year: 2004, status: 'not-played', msuScore: null, umScore: null };
+  const entries = [...games, unplayed];
+  assert.deepEqual(filterGames(entries, { pointsMin: '0', sort: 'points' }), [games[1], games[0], games[2]]);
+  assert.deepEqual(filterGames(entries, { sort: 'msu-points' }), [games[0], games[2], games[1], unplayed]);
+  assert.deepEqual(filterGames(entries, { sort: 'um-points' }), [games[1], games[2], games[0], unplayed]);
+  assert.deepEqual(filterGames(entries, { yearMin: '2004', yearMax: '2004' }), [unplayed]);
+});

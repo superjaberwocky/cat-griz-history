@@ -11,13 +11,54 @@ export function gameDayTemperature(game) {
   return (game.weather.highF + game.weather.lowF) / 2;
 }
 
-export function filterGames(games, { search = '', team = '', decade = '', venue = '', shutout = '', sort = 'newest' } = {}) {
+export const gameMetrics = {
+  year: game => game.year,
+  margin: victoryMargin,
+  points: game => game.msuScore + game.umScore,
+  msuScore: game => game.msuScore,
+  umScore: game => game.umScore,
+};
+
+function matchesChoice(selection, value) {
+  return Array.isArray(selection) ? !selection.length || selection.includes(value) : !selection || selection === value;
+}
+
+function matchesRanges(game, filters) {
+  return Object.entries(gameMetrics).every(([name, metric]) => {
+    const min = filters[`${name}Min`];
+    const max = filters[`${name}Max`];
+    const hasMin = min != null && min !== '';
+    const hasMax = max != null && max !== '';
+    if (!hasMin && !hasMax) return true;
+    if (name !== 'year' && game.status === 'not-played') return false;
+    const value = metric(game);
+    const lower = hasMin ? Number(min) : -Infinity;
+    const upper = hasMax ? Number(max) : Infinity;
+    return value >= Math.min(lower, upper) && value <= Math.max(lower, upper);
+  });
+}
+
+const scoreSorts = new Map([
+  ['points', gameMetrics.points],
+  ['msu-points', gameMetrics.msuScore],
+  ['um-points', gameMetrics.umScore],
+]);
+
+function newestFirst(a, b) {
+  return b.year - a.year || (b.date || '').localeCompare(a.date || '') || (b.sourceGame || 1) - (a.sourceGame || 1);
+}
+
+export function filterGames(games, filters = {}) {
+  const { search = '', team, decade, venue, shutout, sort = 'newest' } = filters;
   const query = search.trim().toLowerCase();
-  return games.filter(g => (!team || winner(g) === team)
-    && (!decade || Math.floor(g.year / 10) * 10 === Number(decade))
-    && (!venue || g.location === venue)
+  const selectedDecades = Array.isArray(decade) ? decade.map(String) : decade && String(decade);
+  const scoreSort = scoreSorts.get(sort);
+  return games.filter(g => matchesChoice(team, winner(g))
+    && matchesChoice(selectedDecades, String(Math.floor(g.year / 10) * 10))
+    && matchesChoice(venue, g.location || '')
     && (shutout !== 'yes' || (g.status !== 'not-played' && ((g.msuScore === 0) !== (g.umScore === 0))))
-    && (!query || [g.year, g.date, g.location, g.notes, g.msuScore, g.umScore].join(' ').toLowerCase().includes(query)))
+    && matchesRanges(g, filters)
+    && (!query || [g.year, g.date, g.location, g.gameLabel, g.notes, g.msuScore, g.umScore].join(' ').toLowerCase().includes(query)))
     .sort((a, b) => {
       if (sort === 'warmest' || sort === 'coldest') {
         const aTemperature = gameDayTemperature(a);
@@ -29,18 +70,19 @@ export function filterGames(games, { search = '', team = '', decade = '', venue 
           return sort === 'warmest' ? bTemperature - aTemperature : aTemperature - bTemperature;
         }
       }
-      if (sort === 'margin' || sort === 'smallest-margin') {
+      if (sort === 'margin' || sort === 'smallest-margin' || scoreSort) {
         const unplayedOrder = Number(a.status === 'not-played') - Number(b.status === 'not-played');
         const byYear = b.year - a.year;
         if (unplayedOrder || a.status === 'not-played') return unplayedOrder || byYear;
+        if (scoreSort) return scoreSort(b) - scoreSort(a) || newestFirst(a, b);
         const aMargin = victoryMargin(a);
         const bMargin = victoryMargin(b);
-        if (sort === 'margin') return bMargin - aMargin || byYear;
-        return Number(aMargin === 0) - Number(bMargin === 0) || aMargin - bMargin || byYear;
+        if (sort === 'margin') return bMargin - aMargin || newestFirst(a, b);
+        return Number(aMargin === 0) - Number(bMargin === 0) || aMargin - bMargin || newestFirst(a, b);
       }
       return sort === 'oldest'
         ? a.year - b.year || (a.date || '').localeCompare(b.date || '') || (a.sourceGame || 1) - (b.sourceGame || 1)
-        : b.year - a.year || (b.date || '').localeCompare(a.date || '') || (b.sourceGame || 1) - (a.sourceGame || 1);
+        : newestFirst(a, b);
     });
 }
 export function summarize(games) {
