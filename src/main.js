@@ -75,7 +75,14 @@ function render(sync = true) {
     const weather = temperature === null
       ? (weatherSort ? '<p class="game-weather">Game-day weather unavailable</p>' : '')
       : `<p class="game-weather"><strong>${temperature}°F</strong> game-day midpoint · High ${g.weather.highF}°F · Low ${g.weather.lowF}°F<br><a href="${escape(g.weather.source)}">${escape(g.weather.station)}</a></p>`;
-    return `<article class="game-card ${result}"><div class="card-top"><span>${g.year}</span><span class="badge">${result === 'tie' ? 'TIE GAME' : result === 'msu' ? 'BOBCAT WIN' : 'GRIZZLY WIN'}</span></div><p class="location">${g.gamesInYear > 1 ? `Game ${g.sourceGame} of ${g.gamesInYear} · ` : ''}${g.gameLabel ? `${escape(g.gameLabel)} · ` : ''}${escape(g.location || 'Location not recorded')}${g.date ? ` · ${escape(g.date)}` : ''}</p>${weather}<div class="score ${result === 'msu' ? 'winning' : ''}"><span>Montana State <small>BOBCATS</small></span><strong>${g.msuScore}</strong></div><div class="score ${result === 'um' ? 'winning' : ''}"><span>Montana <small>GRIZZLIES</small></span><strong>${g.umScore}</strong></div>${g.notes ? `<details><summary>${g.notesScope === 'year' && g.gamesInYear > 1 ? 'Year notes (shared by both games)' : 'Game notes'}</summary><p>${escape(g.notes)}</p></details>` : ''}</article>`;
+    const sharedNotes = g.notesScope === 'year' && g.gamesInYear > 1;
+    const narrative = g.notes
+      ? `<p>${sharedNotes ? '<strong>Year notes (shared by both games)</strong><br>' : ''}${escape(g.notes)}</p>`
+      : '';
+    const notes = narrative || weather
+      ? `<details><summary>Game notes</summary>${narrative}${weather}</details>`
+      : '';
+    return `<article class="game-card ${result}"><div class="card-top"><span>${g.year}</span><span class="badge">${result === 'tie' ? 'TIE GAME' : result === 'msu' ? 'BOBCAT WIN' : 'GRIZZLY WIN'}</span></div><p class="location">${g.gamesInYear > 1 ? `Game ${g.sourceGame} of ${g.gamesInYear} · ` : ''}${g.gameLabel ? `${escape(g.gameLabel)} · ` : ''}${escape(g.location || 'Location not recorded')}${g.date ? ` · ${escape(g.date)}` : ''}</p><div class="score ${result === 'msu' ? 'winning' : ''}"><span>Montana State <small>BOBCATS</small></span><strong>${g.msuScore}</strong></div><div class="score ${result === 'um' ? 'winning' : ''}"><span>Montana <small>GRIZZLIES</small></span><strong>${g.umScore}</strong></div>${notes}</article>`;
   }).join('');
   cardObserver.disconnect();
   results.querySelectorAll('.game-card').forEach((card, index) => {
