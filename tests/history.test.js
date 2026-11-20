@@ -17,6 +17,16 @@ test('ties and sorting use scores and numeric years',()=>{
   assert.deepEqual(filterGames(games,{sort:'oldest'}).map(g=>g.year),[2000,2001,2010]);
   assert.deepEqual(filterGames(games,{sort:'margin'}).map(g=>g.id),['fixture-b','fixture-a','fixture-c']);
 });
+test('weather sorting uses the daily midpoint and places missing records last', () => {
+  const cold = {...games[0], weather: {highF: 14, lowF: -24}};
+  const freezing = {...games[1], weather: {highF: 40, lowF: 24}};
+  const warmer = {...games[2], weather: {highF: 38, lowF: 36}};
+  const missing = {...games[0], year: 2019};
+  const results = [missing, cold, freezing, warmer];
+  assert.deepEqual(filterGames(results, {sort: 'coldest'}), [cold, freezing, warmer, missing]);
+  assert.deepEqual(filterGames(results, {sort: 'warmest'}), [warmer, freezing, cold, missing]);
+  assert.deepEqual(filterGames(results, {sort: 'warmest', venue: 'Bozeman'}), [warmer, cold, missing]);
+});
 test('series totals distinguish both schools and ties',()=>{
   assert.deepEqual(summarize(games),{msu:1,um:1,tie:1,total:3});
   assert.deepEqual(summarize([]),{msu:0,um:0,tie:0,total:0});
@@ -96,17 +106,25 @@ test('recent updates preserve separate meetings, locations, notes, and chronolog
   assert.equal(filterGames(archive.games,{venue:'Missoula'})[0].id,'2025-1');
 });
 
-test('Wikipedia locations include neutral sites and resolve double-game years by scores',()=>{
+test('sourced locations include neutral sites and resolve double-game years',()=>{
   const city = id => archive.games.find(g=>g.id===id).location;
-  assert.equal(city('1897-1'),'Bozeman');
+  assert.equal(city('1897-1'),'Missoula');
   assert.equal(city('1908-1'),'Missoula');
   assert.equal(city('1908-2'),'Bozeman');
   assert.equal(city('1909-2'),'Bozeman');
-  assert.equal(city('1909-1'),null);
-  assert.equal(city('1913-2'),null);
+  assert.equal(city('1909-1'),'Missoula');
+  assert.equal(city('1913-2'),'Missoula');
   assert.equal(city('1926-1'),'Butte');
   assert.equal(city('1950-1'),'Butte');
   assert.equal(city('1951-1'),'Bozeman');
   assert.ok(filterGames(archive.games,{venue:'Butte'}).every(g=>g.year>=1926 && g.year<=1950));
   assert.ok(archive.games.filter(g=>g.status==='not-played').every(g=>g.location===null));
+});
+
+test('game weather follows the matched dates, including the playoff rematch', () => {
+  const rematch = archive.games.find(game => game.id === '2025-2');
+  assert.equal(rematch.date, '2025-12-20');
+  assert.deepEqual([rematch.weather.highF, rematch.weather.lowF], [35, 11]);
+  assert.ok(archive.games.filter(game => game.weather).every(game => game.date && game.location));
+  assert.equal(archive.games.find(game => game.id === '1919-2').weather, undefined);
 });

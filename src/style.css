@@ -23,3 +23,18 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
 @media(max-width:1050px){.filters{grid-template-columns:repeat(2,minmax(0,1fr))}.search{grid-column:1/-1}.game-grid{--columns:2}}
 @media(max-width:600px){:root{font-size:18px}.masthead{gap:1rem}.wordmark{font-size:1.45rem}.wordmark-sub{font-size:.55rem}.masthead>a:last-child{font-size:.8rem;max-width:7rem}.hero h1{font-size:clamp(2.6rem,10vw,3.4rem);letter-spacing:-1px}.intro{font-size:1rem}.hero{padding-bottom:2.8rem}.rivalry-art{height:390px;margin-right:10px}.school strong{font-size:2.7rem}.series{padding-inline:5%}.stat strong{font-size:2rem}.stat span{font-size:.65rem;line-height:1.5;letter-spacing:0}.game-grid{--columns:1}.filters{gap:1rem .7rem;padding:1rem}input,select{font-size:1rem}.filters label{font-size:.8rem}.results-bar{gap:.5rem;align-items:start}.results-bar p{line-height:1.6}.results-bar button{flex-shrink:0;padding-inline:0}.archive{padding-inline:5%}.about{padding-inline:6%}footer{gap:1rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.game-grid>.game-card{animation:none;transition:none}}
+
+.game-grid.weather-ranked {
+  display: grid;
+  grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
+  gap: var(--gap);
+  align-items: start;
+}
+.game-grid.weather-ranked > .game-card { position: static; }
+.game-weather, #weather-coverage {
+  color: #454f54;
+  font-size: .85rem;
+  line-height: 1.6;
+}
+.game-weather { margin: -.5rem 0 1rem; }
+#weather-coverage { margin: -.6rem 0 1.2rem; }

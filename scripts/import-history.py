@@ -27,6 +27,7 @@ for row in source['games']:
 updates = json.loads((ROOT / 'data/source/updates.json').read_text())
 records.extend(updates['games'])
 locations = json.loads((ROOT / 'data/source/wikipedia-locations.json').read_text())
+weather = json.loads((ROOT / 'data/source/game-weather.json').read_text())
 for game in records:
     if game['status'] != 'played':
         continue
@@ -36,6 +37,21 @@ for game in records:
     if len(cities) == 1:
         game['location'] = cities.pop()
         game['locationSource'] = locations['source']
+    if len(exact) == 1:
+        game['date'] = exact[0]['date']
+        game['dateSource'] = locations['source']
+    override = locations['documentedOverrides'].get(game['id'])
+    if override:
+        game['location'] = override['location']
+        game['locationSource'] = override['source']
+        game['date'] = override['date']
+        game['dateSource'] = override['source']
+    observation = weather['games'].get(game['id'])
+    if observation:
+        if observation['date'] != game.get('date') or observation['location'] != game['location']:
+            raise ValueError(f"Weather date or location mismatch: {game['id']}")
+        game['weather'] = {key: value for key, value in observation.items()
+                           if key not in ('date', 'location')}
 archive = {
     'source': 'https://www.hypercrit.net/catgriz/',
     'sourceFile': 'source/cat-griz.json',
@@ -44,6 +60,7 @@ archive = {
     'supplementalSource': updates['source'],
     'locationSourceFile': 'source/wikipedia-locations.json',
     'locationSource': locations['source'],
+    'weatherSourceFile': 'source/game-weather.json',
     'updatedThrough': max(row['year'] for row in records),
     'games': records,
 }

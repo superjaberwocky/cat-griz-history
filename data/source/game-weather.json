@@ -1,0 +1,1077 @@
+{
+  "description": "Game-day daily high and low temperatures in degrees Fahrenheit from NOAA GHCN-Daily and archived National Weather Service climate reports.",
+  "retrieved": "2026-11-20",
+  "games": {
+    "1897-1": {
+      "date": "1897-11-25",
+      "location": "Missoula",
+      "highF": 25,
+      "lowF": 10,
+      "station": "Missoula 6 NW WFO climate series",
+      "stationId": "USC00245740",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly"
+    },
+    "1898-2": {
+      "date": "1898-11-24",
+      "location": "Missoula",
+      "highF": 37,
+      "lowF": 17,
+      "station": "Missoula 6 NW WFO climate series",
+      "stationId": "USC00245740",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly"
+    },
+    "1899-2": {
+      "date": "1899-11-17",
+      "location": "Missoula",
+      "highF": 47,
+      "lowF": 33,
+      "station": "Missoula 6 NW WFO climate series",
+      "stationId": "USC00245740",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly"
+    },
+    "1900-1": {
+      "date": "1900-11-29",
+      "location": "Missoula",
+      "highF": 38,
+      "lowF": 28,
+      "station": "Missoula 6 NW WFO climate series",
+      "stationId": "USC00245740",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly"
+    },
+    "1901-1": {
+      "date": "1901-11-28",
+      "location": "Bozeman",
+      "highF": 50,
+      "lowF": 30,
+      "station": "Bozeman Montana State University",
+      "stationId": "USC00241044",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00241044.dly"
+    },
+    "1902-1": {
+      "date": "1902-11-27",
+      "location": "Missoula",
+      "highF": 36,
+      "lowF": 15,
+      "station": "Missoula 6 NW WFO climate series",
+      "stationId": "USC00245740",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly"
+    },
+    "1903-1": {
+      "date": "1903-11-26",
+      "location": "Bozeman",
+      "highF": 41,
+      "lowF": 18,
+      "station": "Bozeman Montana State University",
+      "stationId": "USC00241044",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00241044.dly"
+    },
+    "1904-1": {
+      "date": "1904-11-24",
+      "location": "Missoula",
+      "highF": 52,
+      "lowF": 25,
+      "station": "Missoula 6 NW WFO climate series",
+      "stationId": "USC00245740",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly"
+    },
+    "1908-1": {
+      "date": "1908-10-10",
+      "location": "Missoula",
+      "highF": 70,
+      "lowF": 38,
+      "station": "Missoula 6 NW WFO climate series",
+      "stationId": "USC00245740",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly"
+    },
+    "1908-2": {
+      "date": "1908-11-20",
+      "location": "Bozeman",
+      "highF": 59,
+      "lowF": 38,
+      "station": "Bozeman Montana State University",
+      "stationId": "USC00241044",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00241044.dly"
+    },
+    "1909-1": {
+      "date": "1909-11-25",
+      "location": "Missoula",
+      "highF": 38,
+      "lowF": 28,
+      "station": "Missoula 6 NW WFO climate series",
+      "stationId": "USC00245740",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly"
+    },
+    "1909-2": {
+      "date": "1909-10-22",
+      "location": "Bozeman",
+      "highF": 53,
+      "lowF": 26,
+      "station": "Bozeman Montana State University",
+      "stationId": "USC00241044",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00241044.dly"
+    },
+    "1910-1": {
+      "date": "1910-10-27",
+      "location": "Bozeman",
+      "highF": 34,
+      "lowF": 17,
+      "station": "Bozeman Montana State University",
+      "stationId": "USC00241044",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00241044.dly"
+    },
+    "1910-2": {
+      "date": "1910-11-24",
+      "location": "Missoula",
+      "highF": 37,
+      "lowF": 28,
+      "station": "Missoula 6 NW WFO climate series",
+      "stationId": "USC00245740",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly"
+    },
+    "1912-1": {
+      "date": "1912-10-19",
+      "location": "Bozeman",
+      "highF": 61,
+      "lowF": 30,
+      "station": "Bozeman Montana State University",
+      "stationId": "USC00241044",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00241044.dly"
+    },
+    "1912-2": {
+      "date": "1912-11-09",
+      "location": "Missoula",
+      "highF": 60,
+      "lowF": 38,
+      "station": "Missoula 6 NW WFO climate series",
+      "stationId": "USC00245740",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly"
+    },
+    "1913-1": {
+      "date": "1913-11-01",
+      "location": "Bozeman",
+      "highF": 60,
+      "lowF": 35,
+      "station": "Bozeman Montana State University",
+      "stationId": "USC00241044",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00241044.dly"
+    },
+    "1913-2": {
+      "date": "1913-11-14",
+      "location": "Missoula",
+      "highF": 39,
+      "lowF": 20,
+      "station": "Missoula 6 NW WFO climate series",
+      "stationId": "USC00245740",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly"
+    },
+    "1914-1": {
+      "date": "1914-11-06",
+      "location": "Missoula",
+      "highF": 48,
+      "lowF": 36,
+      "station": "Missoula 6 NW WFO climate series",
+      "stationId": "USC00245740",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly"
+    },
+    "1916-1": {
+      "date": "1916-11-11",
+      "location": "Bozeman",
+      "highF": 8,
+      "lowF": 1,
+      "station": "Bozeman Montana State University",
+      "stationId": "USC00241044",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00241044.dly"
+    },
+    "1919-1": {
+      "date": "1919-11-22",
+      "location": "Bozeman",
+      "highF": 47,
+      "lowF": 33,
+      "station": "Bozeman Montana State University",
+      "stationId": "USC00241044",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00241044.dly"
+    },
+    "1921-1": {
+      "date": "1921-11-11",
+      "location": "Bozeman",
+      "highF": 62,
+      "lowF": 27,
+      "station": "Bozeman Montana State University",
+      "stationId": "USC00241044",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00241044.dly"
+    },
+    "1923-1": {
+      "date": "1923-11-17",
+      "location": "Bozeman",
+      "highF": 54,
+      "lowF": 26,
+      "station": "Bozeman Montana State University",
+      "stationId": "USC00241044",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00241044.dly"
+    },
+    "1925-1": {
+      "date": "1925-11-28",
+      "location": "Missoula",
+      "highF": 36,
+      "lowF": 19,
+      "station": "Missoula 6 NW WFO climate series",
+      "stationId": "USC00245740",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly"
+    },
+    "1926-1": {
+      "date": "1926-10-23",
+      "location": "Butte",
+      "highF": 59,
+      "lowF": 37,
+      "station": "Butte climate station",
+      "stationId": "USW00024135",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024135.dly"
+    },
+    "1927-1": {
+      "date": "1927-11-19",
+      "location": "Butte",
+      "highF": 45,
+      "lowF": 32,
+      "station": "Butte climate station",
+      "stationId": "USW00024135",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024135.dly"
+    },
+    "1928-1": {
+      "date": "1928-10-27",
+      "location": "Butte",
+      "highF": 53,
+      "lowF": 31,
+      "station": "Butte climate station",
+      "stationId": "USW00024135",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024135.dly"
+    },
+    "1929-1": {
+      "date": "1929-10-19",
+      "location": "Butte",
+      "highF": 52,
+      "lowF": 32,
+      "station": "Butte climate station",
+      "stationId": "USW00024135",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024135.dly"
+    },
+    "1930-1": {
+      "date": "1930-10-18",
+      "location": "Butte",
+      "highF": 58,
+      "lowF": 35,
+      "station": "Butte climate station",
+      "stationId": "USW00024135",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024135.dly"
+    },
+    "1931-1": {
+      "date": "1931-10-31",
+      "location": "Butte",
+      "highF": 62,
+      "lowF": 27,
+      "station": "Butte climate station",
+      "stationId": "USW00024135",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024135.dly"
+    },
+    "1932-1": {
+      "date": "1932-10-22",
+      "location": "Butte",
+      "highF": 56,
+      "lowF": 30,
+      "station": "Butte climate station",
+      "stationId": "USW00024135",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024135.dly"
+    },
+    "1933-1": {
+      "date": "1933-11-04",
+      "location": "Butte",
+      "highF": 27,
+      "lowF": 7,
+      "station": "Butte climate station",
+      "stationId": "USW00024135",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024135.dly"
+    },
+    "1934-1": {
+      "date": "1934-11-10",
+      "location": "Butte",
+      "highF": 60,
+      "lowF": 23,
+      "station": "Butte climate station",
+      "stationId": "USW00024135",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024135.dly"
+    },
+    "1935-1": {
+      "date": "1935-10-05",
+      "location": "Butte",
+      "highF": 67,
+      "lowF": 35,
+      "station": "Butte climate station",
+      "stationId": "USW00024135",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024135.dly"
+    },
+    "1936-1": {
+      "date": "1936-10-24",
+      "location": "Butte",
+      "highF": 50,
+      "lowF": 19,
+      "station": "Butte climate station",
+      "stationId": "USW00024135",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024135.dly"
+    },
+    "1937-1": {
+      "date": "1937-10-30",
+      "location": "Butte",
+      "highF": 66,
+      "lowF": 24,
+      "station": "Butte climate station",
+      "stationId": "USW00024135",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024135.dly"
+    },
+    "1938-1": {
+      "date": "1938-11-12",
+      "location": "Butte",
+      "highF": 23,
+      "lowF": -5,
+      "station": "Butte climate station",
+      "stationId": "USW00024135",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024135.dly"
+    },
+    "1940-1": {
+      "date": "1940-10-19",
+      "location": "Butte",
+      "highF": 71,
+      "lowF": 30,
+      "station": "Butte climate station",
+      "stationId": "USW00024135",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024135.dly"
+    },
+    "1941-1": {
+      "date": "1941-10-25",
+      "location": "Butte",
+      "highF": 60,
+      "lowF": 29,
+      "station": "Butte climate station",
+      "stationId": "USW00024135",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024135.dly"
+    },
+    "1946-1": {
+      "date": "1946-10-19",
+      "location": "Butte",
+      "highF": 51,
+      "lowF": 22,
+      "station": "Butte climate station",
+      "stationId": "USW00024135",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024135.dly"
+    },
+    "1947-1": {
+      "date": "1947-10-18",
+      "location": "Butte",
+      "highF": 64,
+      "lowF": 38,
+      "station": "Butte climate station",
+      "stationId": "USW00024135",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024135.dly"
+    },
+    "1948-1": {
+      "date": "1948-10-16",
+      "location": "Butte",
+      "highF": 38,
+      "lowF": 17,
+      "station": "Butte climate station",
+      "stationId": "USW00024135",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024135.dly"
+    },
+    "1949-1": {
+      "date": "1949-10-29",
+      "location": "Butte",
+      "highF": 44,
+      "lowF": 27,
+      "station": "Butte climate station",
+      "stationId": "USW00024135",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024135.dly"
+    },
+    "1950-1": {
+      "date": "1950-10-21",
+      "location": "Butte",
+      "highF": 45,
+      "lowF": 32,
+      "station": "Butte climate station",
+      "stationId": "USW00024135",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024135.dly"
+    },
+    "1951-1": {
+      "date": "1951-10-20",
+      "location": "Bozeman",
+      "highF": 48,
+      "lowF": 30,
+      "station": "Bozeman Gallatin Field Airport",
+      "stationId": "USW00024132",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly"
+    },
+    "1952-1": {
+      "date": "1952-11-01",
+      "location": "Missoula",
+      "highF": 47,
+      "lowF": 33,
+      "station": "Missoula 6 NW WFO climate series",
+      "stationId": "USC00245740",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly"
+    },
+    "1953-1": {
+      "date": "1953-11-07",
+      "location": "Bozeman",
+      "highF": 51,
+      "lowF": 23,
+      "station": "Bozeman Gallatin Field Airport",
+      "stationId": "USW00024132",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly"
+    },
+    "1954-1": {
+      "date": "1954-11-13",
+      "location": "Missoula",
+      "highF": 53,
+      "lowF": 34,
+      "station": "Missoula 6 NW WFO climate series",
+      "stationId": "USC00245740",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly"
+    },
+    "1955-1": {
+      "date": "1955-11-05",
+      "location": "Bozeman",
+      "highF": 45,
+      "lowF": 23,
+      "station": "Bozeman Gallatin Field Airport",
+      "stationId": "USW00024132",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly"
+    },
+    "1956-1": {
+      "date": "1956-11-03",
+      "location": "Missoula",
+      "highF": 42,
+      "lowF": 22,
+      "station": "Missoula 6 NW WFO climate series",
+      "stationId": "USC00245740",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly"
+    },
+    "1957-1": {
+      "date": "1957-11-09",
+      "location": "Bozeman",
+      "highF": 46,
+      "lowF": 16,
+      "station": "Bozeman Gallatin Field Airport",
+      "stationId": "USW00024132",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly"
+    },
+    "1958-1": {
+      "date": "1958-11-15",
+      "location": "Missoula",
+      "highF": 31,
+      "lowF": 21,
+      "station": "Missoula 6 NW WFO climate series",
+      "stationId": "USC00245740",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly"
+    },
+    "1959-1": {
+      "date": "1959-11-07",
+      "location": "Bozeman",
+      "highF": 49,
+      "lowF": 27,
+      "station": "Bozeman Gallatin Field Airport",
+      "stationId": "USW00024132",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly"
+    },
+    "1960-1": {
+      "date": "1960-11-05",
+      "location": "Missoula",
+      "highF": 43,
+      "lowF": 19,
+      "station": "Missoula 6 NW WFO climate series",
+      "stationId": "USC00245740",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly"
+    },
+    "1961-1": {
+      "date": "1961-11-11",
+      "location": "Bozeman",
+      "highF": 45,
+      "lowF": 29,
+      "station": "Bozeman Gallatin Field Airport",
+      "stationId": "USW00024132",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly"
+    },
+    "1962-1": {
+      "date": "1962-11-10",
+      "location": "Missoula",
+      "highF": 50,
+      "lowF": 32,
+      "station": "Missoula 6 NW WFO climate series",
+      "stationId": "USC00245740",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly"
+    },
+    "1963-1": {
+      "date": "1963-11-09",
+      "location": "Bozeman",
+      "highF": 55,
+      "lowF": 35,
+      "station": "Bozeman Gallatin Field Airport",
+      "stationId": "USW00024132",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly"
+    },
+    "1964-1": {
+      "date": "1964-11-07",
+      "location": "Missoula",
+      "highF": 42,
+      "lowF": 15,
+      "station": "Missoula 6 NW WFO climate series",
+      "stationId": "USC00245740",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly"
+    },
+    "1965-1": {
+      "date": "1965-11-06",
+      "location": "Bozeman",
+      "highF": 50,
+      "lowF": 32,
+      "station": "Bozeman Gallatin Field Airport",
+      "stationId": "USW00024132",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly"
+    },
+    "1966-1": {
+      "date": "1966-11-05",
+      "location": "Missoula",
+      "highF": 42,
+      "lowF": 27,
+      "station": "Missoula 2 NE",
+      "stationId": "USC00245735",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245735.dly"
+    },
+    "1967-1": {
+      "date": "1967-11-04",
+      "location": "Bozeman",
+      "highF": 38,
+      "lowF": 19,
+      "station": "Bozeman Gallatin Field Airport",
+      "stationId": "USW00024132",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly"
+    },
+    "1968-1": {
+      "date": "1968-11-02",
+      "location": "Missoula",
+      "highF": 42,
+      "lowF": 25,
+      "station": "Missoula 2 NE",
+      "stationId": "USC00245735",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245735.dly"
+    },
+    "1969-1": {
+      "date": "1969-11-01",
+      "location": "Bozeman",
+      "highF": 40,
+      "lowF": 23,
+      "station": "Bozeman Gallatin Field Airport",
+      "stationId": "USW00024132",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly"
+    },
+    "1970-1": {
+      "date": "1970-11-07",
+      "location": "Missoula",
+      "highF": 44,
+      "lowF": 26,
+      "station": "Missoula 2 NE",
+      "stationId": "USC00245735",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245735.dly"
+    },
+    "1971-1": {
+      "date": "1971-11-06",
+      "location": "Bozeman",
+      "highF": 44,
+      "lowF": 10,
+      "station": "Bozeman Gallatin Field Airport",
+      "stationId": "USW00024132",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly"
+    },
+    "1972-1": {
+      "date": "1972-11-04",
+      "location": "Missoula",
+      "highF": 46,
+      "lowF": 38,
+      "station": "Missoula 2 NE",
+      "stationId": "USC00245735",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245735.dly"
+    },
+    "1973-1": {
+      "date": "1973-10-20",
+      "location": "Bozeman",
+      "highF": 67,
+      "lowF": 39,
+      "station": "Bozeman Gallatin Field Airport",
+      "stationId": "USW00024132",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly"
+    },
+    "1974-1": {
+      "date": "1974-11-02",
+      "location": "Missoula",
+      "highF": 48,
+      "lowF": 33,
+      "station": "Missoula 2 NE",
+      "stationId": "USC00245735",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245735.dly"
+    },
+    "1975-1": {
+      "date": "1975-10-25",
+      "location": "Bozeman",
+      "highF": 37,
+      "lowF": 11,
+      "station": "Bozeman Gallatin Field Airport",
+      "stationId": "USW00024132",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly"
+    },
+    "1976-1": {
+      "date": "1976-10-30",
+      "location": "Missoula",
+      "highF": 54,
+      "lowF": 23,
+      "station": "Missoula 2 NE",
+      "stationId": "USC00245735",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245735.dly"
+    },
+    "1977-1": {
+      "date": "1977-10-29",
+      "location": "Bozeman",
+      "highF": 58,
+      "lowF": 36,
+      "station": "Bozeman Gallatin Field Airport",
+      "stationId": "USW00024132",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly"
+    },
+    "1978-1": {
+      "date": "1978-11-04",
+      "location": "Missoula",
+      "highF": 61,
+      "lowF": 26,
+      "station": "Missoula 2 NE",
+      "stationId": "USC00245735",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245735.dly"
+    },
+    "1979-1": {
+      "date": "1979-11-03",
+      "location": "Bozeman",
+      "highF": 45,
+      "lowF": 27,
+      "station": "Bozeman Gallatin Field Airport",
+      "stationId": "USW00024132",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly"
+    },
+    "1980-1": {
+      "date": "1980-11-01",
+      "location": "Missoula",
+      "highF": 54,
+      "lowF": 34,
+      "station": "Missoula 2 NE",
+      "stationId": "USC00245735",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245735.dly"
+    },
+    "1981-1": {
+      "date": "1981-10-31",
+      "location": "Bozeman",
+      "highF": 57,
+      "lowF": 34,
+      "station": "Bozeman Gallatin Field Airport",
+      "stationId": "USW00024132",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly"
+    },
+    "1982-1": {
+      "date": "1982-10-30",
+      "location": "Missoula",
+      "highF": 49,
+      "lowF": 34,
+      "station": "Missoula 2 NE",
+      "stationId": "USC00245735",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245735.dly"
+    },
+    "1983-1": {
+      "date": "1983-10-29",
+      "location": "Bozeman",
+      "highF": 65,
+      "lowF": 33,
+      "station": "Bozeman Gallatin Field Airport",
+      "stationId": "USW00024132",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly"
+    },
+    "1984-1": {
+      "date": "1984-11-03",
+      "location": "Missoula",
+      "highF": 44,
+      "lowF": 35,
+      "station": "Missoula 2 NE",
+      "stationId": "USC00245735",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245735.dly"
+    },
+    "1985-1": {
+      "date": "1985-10-26",
+      "location": "Bozeman",
+      "highF": 59,
+      "lowF": 26,
+      "station": "Bozeman Gallatin Field Airport",
+      "stationId": "USW00024132",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly"
+    },
+    "1986-1": {
+      "date": "1986-10-25",
+      "location": "Missoula",
+      "highF": 66,
+      "lowF": 32,
+      "station": "Missoula 2 NE",
+      "stationId": "USC00245735",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245735.dly"
+    },
+    "1987-1": {
+      "date": "1987-10-31",
+      "location": "Bozeman",
+      "highF": 65,
+      "lowF": 27,
+      "station": "Bozeman Gallatin Field Airport",
+      "stationId": "USW00024132",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly"
+    },
+    "1988-1": {
+      "date": "1988-11-05",
+      "location": "Missoula",
+      "highF": 46,
+      "lowF": 36,
+      "station": "Missoula 2 NE",
+      "stationId": "USC00245735",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245735.dly"
+    },
+    "1989-1": {
+      "date": "1989-11-04",
+      "location": "Bozeman",
+      "highF": 54,
+      "lowF": 33,
+      "station": "Bozeman Gallatin Field Airport",
+      "stationId": "USW00024132",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly"
+    },
+    "1990-1": {
+      "date": "1990-10-27",
+      "location": "Missoula",
+      "highF": 58,
+      "lowF": 31,
+      "station": "Missoula 2 NE",
+      "stationId": "USC00245735",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245735.dly"
+    },
+    "1991-1": {
+      "date": "1991-11-02",
+      "location": "Bozeman",
+      "highF": 9,
+      "lowF": -21,
+      "station": "Bozeman Gallatin Field Airport",
+      "stationId": "USW00024132",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly"
+    },
+    "1992-1": {
+      "date": "1992-10-24",
+      "location": "Missoula",
+      "highF": 67,
+      "lowF": 35,
+      "station": "Missoula 2 NE",
+      "stationId": "USC00245735",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245735.dly"
+    },
+    "1993-1": {
+      "date": "1993-11-13",
+      "location": "Bozeman",
+      "highF": 33,
+      "lowF": 14,
+      "station": "Bozeman Gallatin Field Airport",
+      "stationId": "USW00024132",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly"
+    },
+    "1994-1": {
+      "date": "1994-11-19",
+      "location": "Missoula",
+      "highF": 36,
+      "lowF": 24,
+      "station": "Missoula 2 NE",
+      "stationId": "USC00245735",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245735.dly"
+    },
+    "1995-1": {
+      "date": "1995-11-18",
+      "location": "Bozeman",
+      "highF": 63,
+      "lowF": 25,
+      "station": "Bozeman Gallatin Field Airport",
+      "stationId": "USW00024132",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly"
+    },
+    "1996-1": {
+      "date": "1996-11-23",
+      "location": "Missoula",
+      "highF": 26,
+      "lowF": 7,
+      "station": "Missoula 2 NE",
+      "stationId": "USC00245735",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245735.dly"
+    },
+    "1997-1": {
+      "date": "1997-11-22",
+      "location": "Bozeman",
+      "highF": 42,
+      "lowF": 14,
+      "station": "Bozeman Gallatin Field Airport",
+      "stationId": "USW00024132",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly"
+    },
+    "1998-1": {
+      "date": "1998-11-21",
+      "location": "Missoula",
+      "highF": 45,
+      "lowF": 37,
+      "station": "Missoula 2 NE",
+      "stationId": "USC00245735",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245735.dly"
+    },
+    "1999-1": {
+      "date": "1999-11-20",
+      "location": "Bozeman",
+      "highF": 53,
+      "lowF": 23,
+      "station": "Bozeman Gallatin Field Airport",
+      "stationId": "USW00024132",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly"
+    },
+    "2000-1": {
+      "date": "2000-11-18",
+      "location": "Missoula",
+      "highF": 41,
+      "lowF": 19,
+      "station": "Missoula 2 NE",
+      "stationId": "USC00245735",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245735.dly"
+    },
+    "2001-1": {
+      "date": "2001-11-17",
+      "location": "Bozeman",
+      "highF": 56,
+      "lowF": 26,
+      "station": "Bozeman Gallatin Field Airport",
+      "stationId": "USW00024132",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly"
+    },
+    "2002-1": {
+      "date": "2002-11-23",
+      "location": "Missoula",
+      "highF": 45,
+      "lowF": 30,
+      "station": "Missoula 6 NW WFO climate series",
+      "stationId": "USC00245740",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly"
+    },
+    "2003-1": {
+      "date": "2003-11-22",
+      "location": "Bozeman",
+      "highF": 11,
+      "lowF": -11,
+      "station": "Bozeman Gallatin Field Airport",
+      "stationId": "USW00024132",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly"
+    },
+    "2004-1": {
+      "date": "2004-11-20",
+      "location": "Missoula",
+      "highF": 40,
+      "lowF": 26,
+      "station": "Missoula 6 NW WFO climate series",
+      "stationId": "USC00245740",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly"
+    },
+    "2005-1": {
+      "date": "2005-11-19",
+      "location": "Bozeman",
+      "highF": 49,
+      "lowF": 21,
+      "station": "Bozeman Gallatin Field Airport",
+      "stationId": "USW00024132",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly"
+    },
+    "2006-1": {
+      "date": "2006-11-18",
+      "location": "Missoula",
+      "highF": 45,
+      "lowF": 28,
+      "station": "Missoula 2 NE",
+      "stationId": "USC00245735",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245735.dly"
+    },
+    "2007-1": {
+      "date": "2007-11-17",
+      "location": "Bozeman",
+      "highF": 53,
+      "lowF": 38,
+      "station": "Bozeman Gallatin Field Airport",
+      "stationId": "USW00024132",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly"
+    },
+    "2008-1": {
+      "date": "2008-11-22",
+      "location": "Missoula",
+      "highF": 39,
+      "lowF": 28,
+      "station": "Missoula 2 NE",
+      "stationId": "USC00245735",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245735.dly"
+    },
+    "2009-1": {
+      "date": "2009-11-21",
+      "location": "Bozeman",
+      "highF": 50,
+      "lowF": 14,
+      "station": "Bozeman Gallatin Field Airport",
+      "stationId": "USW00024132",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly"
+    },
+    "2010-1": {
+      "date": "2010-11-20",
+      "location": "Missoula",
+      "highF": 24,
+      "lowF": 12,
+      "station": "Missoula 6 NW WFO climate series",
+      "stationId": "USC00245740",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly"
+    },
+    "2011-1": {
+      "date": "2011-11-19",
+      "location": "Bozeman",
+      "highF": 15,
+      "lowF": 2,
+      "station": "Bozeman Gallatin Field Airport",
+      "stationId": "USW00024132",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly"
+    },
+    "2012-1": {
+      "date": "2012-11-17",
+      "location": "Missoula",
+      "highF": 54,
+      "lowF": 26,
+      "station": "Missoula 6 NW WFO climate series",
+      "stationId": "USC00245740",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly"
+    },
+    "2013-1": {
+      "date": "2013-11-23",
+      "location": "Bozeman",
+      "highF": 30,
+      "lowF": 5,
+      "station": "Bozeman Gallatin Field Airport",
+      "stationId": "USW00024132",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly"
+    },
+    "2014-1": {
+      "date": "2014-11-22",
+      "location": "Missoula",
+      "highF": 45,
+      "lowF": 34,
+      "station": "Missoula 6 NW WFO climate series",
+      "stationId": "USC00245740",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly"
+    },
+    "2015-1": {
+      "date": "2015-11-21",
+      "location": "Bozeman",
+      "highF": 32,
+      "lowF": 2,
+      "station": "Bozeman Gallatin Field Airport",
+      "stationId": "USW00024132",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly"
+    },
+    "2016-1": {
+      "date": "2016-11-19",
+      "location": "Missoula",
+      "highF": 42,
+      "lowF": 30,
+      "station": "Missoula 6 NW WFO climate series",
+      "stationId": "USC00245740",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly"
+    },
+    "2017-1": {
+      "date": "2017-11-18",
+      "location": "Bozeman",
+      "highF": 35,
+      "lowF": 14,
+      "station": "Bozeman Gallatin Field Airport",
+      "stationId": "USW00024132",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly"
+    },
+    "2018-1": {
+      "date": "2018-11-17",
+      "location": "Missoula",
+      "highF": 36,
+      "lowF": 20,
+      "station": "Missoula 6 NW WFO climate series",
+      "stationId": "USC00245740",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly"
+    },
+    "2019-1": {
+      "date": "2019-11-23",
+      "location": "Bozeman",
+      "highF": 48,
+      "lowF": 16,
+      "station": "Bozeman Gallatin Field Airport",
+      "stationId": "USW00024132",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly"
+    },
+    "2021-1": {
+      "date": "2021-11-20",
+      "location": "Missoula",
+      "highF": 40,
+      "lowF": 28,
+      "station": "Missoula 6 NW WFO climate series",
+      "stationId": "USC00245740",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly"
+    },
+    "2022-1": {
+      "date": "2022-11-19",
+      "location": "Bozeman",
+      "highF": 13,
+      "lowF": -16,
+      "station": "Bozeman Gallatin Field Airport",
+      "stationId": "USW00024132",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly"
+    },
+    "2023-1": {
+      "date": "2023-11-18",
+      "location": "Missoula",
+      "highF": 33,
+      "lowF": 22,
+      "station": "Missoula 6 NW WFO climate series",
+      "stationId": "USC00245740",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly"
+    },
+    "2024-1": {
+      "date": "2024-11-23",
+      "location": "Bozeman",
+      "highF": 53,
+      "lowF": 26,
+      "station": "Bozeman Gallatin Field Airport",
+      "stationId": "USW00024132",
+      "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly"
+    },
+    "2025-1": {
+      "date": "2025-11-22",
+      "location": "Missoula",
+      "highF": 45,
+      "lowF": 26,
+      "station": "Missoula International Airport",
+      "stationId": "USW00024153",
+      "source": "https://mesonet2.agron.iastate.edu/wx/afos/p.php?e=202511230838&pil=CLIMSO"
+    },
+    "2025-2": {
+      "date": "2025-12-20",
+      "location": "Bozeman",
+      "highF": 35,
+      "lowF": 11,
+      "station": "Bozeman Gallatin Field Airport",
+      "stationId": "USW00024132",
+      "source": "https://mesonet3.agron.iastate.edu/wx/afos/p.php?e=202601011210&pil=CF6BZN"
+    }
+  }
+}
