@@ -37,11 +37,11 @@ npm test
 npm run build
 ```
 
-The importer uses only the Python standard library. It expands each `_2` score pair into a separate game and decodes HTML entities into plain text. Narratives in original two-game years describe the year collectively and are labeled accordingly on both cards; source score-pair order is preserved without inferring game dates.
+The importer uses only the Python standard library. It expands each `_2` score pair into a separate game and decodes HTML entities into plain text. Narratives in original two-game years describe the year collectively and are labeled accordingly on both cards; source score-pair order is preserved.
 
 1911, 1915, 1918, and 2020 explicitly describe games not played. Their original 0–0 placeholders become `status: "not-played"` with null scores. They remain searchable and filterable but are excluded from series totals and ties. Actual scoreless ties are preserved. Largest-margin sorting places unplayed entries last.
 
-`data/games.json` contains source metadata and normalized entries. Each entry has a unique `id`, integer `year`, `status`, source game number, scores, nullable `location`, and plain-text `notes`. Dates were not supplied as structured fields and are not inferred from narrative mentions. The supplemental 2024–2025 records include the supplied cities, individual game narratives (`notesScope: "game"`), and meeting labels. These locations enable the location filter; historical locations are supplemented from Wikipedia as described below. The importer merges both source files so rerunning it preserves the updates. Eight years absent from the source (1905–1907, 1924, 1942–1945) are not fabricated as entries. Coverage extends through 2025, including the playoff rematch.
+`data/games.json` contains source metadata and normalized entries. Each entry has a unique `id`, integer `year`, `status`, source game number, scores, nullable `location`, and plain-text `notes`. Game dates come from the rivalry results table and documented historical sources. Each matched date includes a source URL. The supplemental 2024–2025 records include the supplied cities, individual game narratives (`notesScope: "game"`), and meeting labels. These locations enable the location filter; historical locations are supplemented from Wikipedia as described below. The importer merges both source files so rerunning it preserves the updates. Eight years absent from the source (1905–1907, 1924, 1942–1945) are not fabricated as entries. Coverage extends through 2025, including the playoff rematch.
 
 Source narratives are retained without factual corrections, including possible inconsistencies in narrative/score ordering and championship descriptions. Their historical accuracy remains to be checked against authoritative records. The original file is preserved for that review.
 
@@ -57,6 +57,15 @@ In the repository's **Settings → Pages → Build and deployment**, select **Gi
 
 ## Wikipedia historical context and locations
 
-The About the Brawl section summarizes the [Montana–Montana State football rivalry article](https://en.wikipedia.org/wiki/Montana%E2%80%93Montana_State_football_rivalry). The 125 rows in its game-results table are retained as factual location/score matching data in `data/source/wikipedia-locations.json`. The importer joins by year and exact scores, or assigns a city when every candidate for a year lists the same city. Scores and original narratives remain unchanged. No modern stadium is assigned retrospectively to an older game.
+The About the Brawl section summarizes the [Montana–Montana State football rivalry article](https://en.wikipedia.org/wiki/Montana%E2%80%93Montana_State_football_rivalry). The 125 rows in its game-results table are retained as date, location, and score matching data in `data/source/wikipedia-locations.json`. The importer joins by year and exact scores, or assigns a city when every candidate for a year lists the same city. Scores and original narratives remain unchanged. No modern stadium is assigned retrospectively to an older game.
 
-Two entries, `1909-1` and `1913-2`, retain unknown locations because the source scores differ and their years have games in different cities. The 1897 card uses Wikipedia's tabulated Bozeman location, although its original narrative mentions Missoula. These source discrepancies need further historical review. Unplayed years retain null locations. Location filtering includes Butte. The imported archive's game counts and win totals differ from Wikipedia and are not presented as official series totals.
+Documented overrides in the same file supply dates and locations where university records or contemporary coverage identify the meeting. For example, Montana State Athletics documents the first game as November 25, 1897, in Missoula. The archive keeps the imported scores, including where other sources report different scores. The second listed 1919 entry remains undated because the sources consulted identify only the 6–6 game. Unplayed years retain null locations. Location filtering includes Butte. The imported archive's game counts and win totals differ from Wikipedia and are not presented as official series totals.
+
+
+### Game-day weather
+
+The archive has weather for 119 of 126 played games. **Warmest first** and **Coldest first** rank games by the midpoint of the game day's station high and low in °F. These readings describe the day at the weather station. Kickoff and on-field conditions can differ. Games with missing readings appear after ranked games. When station readings tie, the newer game appears first.
+
+`data/source/game-weather.json` records the date, city, station ID, daily high and low, and a source link for each reading. Most readings are from [NOAA NCEI GHCN-Daily](https://www.ncei.noaa.gov/products/land-based-station/global-historical-climatology-network-daily). The two 2025 readings come from archived National Weather Service reports. Historical station series can include predecessor sites. GHCN-Daily temperatures were converted from tenths of a degree Celsius to whole degrees Fahrenheit, and values flagged by NOAA quality checks were excluded.
+
+The history importer merges this checked-in snapshot and checks each reading against the matched date and city. Running it requires no network access.
