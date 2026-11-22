@@ -1,5 +1,5 @@
 {
-  "source": "Game results and narratives supplied by the project owner",
+  "source": "Game results and narratives supplied by the project owner or drawn from Montana State University Athletics",
   "games": [
     {
       "id": "2024-1",
@@ -38,6 +38,19 @@
       "location": "Bozeman",
       "gameLabel": "Playoff rematch · FCS semifinal",
       "notes": "The rivals met again four weeks later in an FCS semifinal in Bozeman. Montana erased a 20–3 deficit to take a 23–20 third-quarter lead, but Montana State scored the final 28 points, including 21 in the fourth quarter, to advance to the national championship game. Justin Lamson passed for 209 yards and two touchdowns, Adam Jones rushed for 131 yards and two scores, and Taco Dowler caught five passes for 125 yards. The Bobcats finished with 449 total yards to Montana’s 347.",
+      "notesScope": "game"
+    },
+    {
+      "id": "2026-1",
+      "year": 2026,
+      "status": "played",
+      "sourceGame": 1,
+      "gamesInYear": 1,
+      "msuScore": 42,
+      "umScore": 16,
+      "location": "Bozeman",
+      "gameLabel": "Regular season",
+      "notes": "Montana State turned a 7–3 halftime lead into a 42–16 win in Bozeman, scoring touchdowns on all five second-half possessions to claim its third straight outright Big Sky championship. Adam Jones opened the half with a 9-yard touchdown run, and Takhari Carr intercepted Montana in the end zone before Justin Lamson found Carter Dahlke for an 11-yard score. Lamson passed for 265 yards and three touchdowns and ran for 123 yards. Two of his touchdown passes went to Rocky Lencioni, including a 75-yarder on the first play after Montana cut the lead to 21–10. The Bobcats finished with 582 total yards.",
       "notesScope": "game"
     }
   ]

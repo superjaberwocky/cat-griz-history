@@ -3,11 +3,11 @@
   "sourceFile": "source/cat-griz.json",
   "status": "imported-from-user-supplied-source",
   "supplementalSourceFile": "source/updates.json",
-  "supplementalSource": "Game results and narratives supplied by the project owner",
+  "supplementalSource": "Game results and narratives supplied by the project owner or drawn from Montana State University Athletics",
   "locationSourceFile": "source/wikipedia-locations.json",
   "locationSource": "https://en.wikipedia.org/wiki/Montana%E2%80%93Montana_State_football_rivalry#Game_results",
   "weatherSourceFile": "source/game-weather.json",
-  "updatedThrough": 2025,
+  "updatedThrough": 2026,
   "games": [
     {
       "id": "1897-1",
@@ -2780,6 +2780,22 @@
         "stationId": "USW00024132",
         "source": "https://mesonet3.agron.iastate.edu/wx/afos/p.php?e=202601011210&pil=CF6BZN"
       }
+    },
+    {
+      "id": "2026-1",
+      "year": 2026,
+      "status": "played",
+      "sourceGame": 1,
+      "gamesInYear": 1,
+      "msuScore": 42,
+      "umScore": 16,
+      "location": "Bozeman",
+      "gameLabel": "Regular season",
+      "notes": "Montana State turned a 7–3 halftime lead into a 42–16 win in Bozeman, scoring touchdowns on all five second-half possessions to claim its third straight outright Big Sky championship. Adam Jones opened the half with a 9-yard touchdown run, and Takhari Carr intercepted Montana in the end zone before Justin Lamson found Carter Dahlke for an 11-yard score. Lamson passed for 265 yards and three touchdowns and ran for 123 yards. Two of his touchdown passes went to Rocky Lencioni, including a 75-yarder on the first play after Montana cut the lead to 21–10. The Bobcats finished with 582 total yards.",
+      "notesScope": "game",
+      "locationSource": "https://msubobcats.com/news/2026/11/21/football-big-second-half-lifts-bobcats-past-grizzlies",
+      "date": "2026-11-21",
+      "dateSource": "https://msubobcats.com/news/2026/11/21/football-big-second-half-lifts-bobcats-past-grizzlies"
     }
   ]
 }
