@@ -137,7 +137,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
 }
 .active-filters button:hover { background: var(--gold-light); }
 .active-filters span { margin-left: .2rem; font-size: 1rem; }
-.game-grid { display: grid; gap: .9rem; align-items: start; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.game-grid { display: grid; gap: .9rem; grid-template-columns: minmax(0, 1fr); }
 .game-card { min-width: 0; }
 .card-top { gap: .35rem; flex-wrap: wrap; }
 .visually-hidden {
@@ -147,9 +147,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
   overflow: hidden;
   clip-path: inset(50%);
   white-space: nowrap;
-}
-@media (min-width: 1280px) {
-  .game-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 @media (max-width: 820px) {
   .archive-layout { grid-template-columns: minmax(0, 1fr); gap: .85rem; }
@@ -178,7 +175,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
   }
 }
 @media (max-width: 580px) {
-  .archive-tools, .game-grid { grid-template-columns: minmax(0, 1fr); }
+  .archive-tools { grid-template-columns: minmax(0, 1fr); }
   .archive-tools { gap: .65rem; padding: .75rem; }
 }
 
