@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { filterGames, summarize, validateGames } from '../src/history.js';
+import { filterGames, formatGameDate, gameDayTemperature, summarize, validateGames } from '../src/history.js';
 const games = [
   {id:'fixture-a',year:2000,location:'Bozeman',msuScore:10,umScore:7,notes:'Overtime'},
   {id:'fixture-b',year:2010,location:'Missoula',msuScore:0,umScore:21},
@@ -51,34 +51,39 @@ test('import validation rejects duplicate games and invalid scores',()=>{
 });
 
 const archive = JSON.parse((await import('node:fs')).readFileSync(new URL('../data/games.json', import.meta.url), 'utf8'));
-const source = JSON.parse((await import('node:fs')).readFileSync(new URL('../data/source/cat-griz.json', import.meta.url), 'utf8'));
-test('supplied archive imports every score pair and preserves yearly narratives',()=>{
+test('CSV corrections replace legacy dates, scores, and locations', () => {
   validateGames(archive.games);
-  assert.equal(source.games.length,119);
-  assert.equal(archive.games.length,131);
-  for (const row of source.games) {
-    const entries = archive.games.filter(g=>g.year===row.year);
-    assert.equal(entries.length, Object.hasOwn(row,'cats_score_2') ? 2 : 1);
-    for (const g of entries) {
-      if (g.status === 'played') {
-        const suffix = g.sourceGame === 2 ? '_2' : '';
-        assert.equal(g.msuScore,row[`cats_score${suffix}`]);
-        assert.equal(g.umScore,row[`griz_score${suffix}`]);
-      }
-      if (g.status === 'not-played') assert.equal(g.location,null);
-      assert.ok(g.notes.length>0);
-      assert.equal(g.notesScope,'year');
-      assert.doesNotMatch(g.notes,/&(?:apos|#8220|#8221);/);
-    }
-  }
-  assert.match(archive.games.find(g=>g.year===1897).notes,/“Varsity”/);
+  assert.equal(archive.games.length, 130);
+  const list = archive.games.filter(game => game.status === 'played');
+  assert.deepEqual(list.map(game => game.seriesGame), Array.from({ length: 126 }, (_, i) => i + 1));
+  const corrected = Object.fromEntries(list.map(game =>
+    [game.id, [game.date, game.location, game.msuScore, game.umScore]]));
+  assert.deepEqual(corrected['1897-1'], ['1897-11-26', 'Missoula', 6, 18]);
+  assert.deepEqual(corrected['1899-2'], ['1899-11-26', 'Missoula', 5, 0]);
+  assert.deepEqual(corrected['1909-2'], ['1909-11-25', 'Missoula', 5, 15]);
+  assert.deepEqual(corrected['1914-1'], ['1914-11-06', 'Missoula', 9, 26]);
+  assert.deepEqual(corrected['1951-1'], ['1951-10-20', 'Butte', 0, 38]);
+  assert.deepEqual(corrected['1952-1'], ['1952-11-01', 'Bozeman', 12, 35]);
+  assert.equal(corrected['1919-2'], undefined);
+  assert.equal(formatGameDate(corrected['1897-1'][0]), 'November 26, 1897');
+  assert.equal(filterGames(list, { search: 'November 26, 1897' })[0].id, '1897-1');
 });
+
+test('the vacated Montana win counts only in on-field series totals', () => {
+  const game = archive.games.find(game => game.id === '2011-1');
+  assert.equal(game.vacated, true);
+  assert.deepEqual([game.msuScore, game.umScore], [10, 36]);
+  assert.deepEqual(archive.games.at(-1).seriesRecord, {
+    msu: 46, um: 75, tie: 5, officialMsu: 46, officialUm: 74,
+  });
+});
+
 test('unplayed placeholders do not become ties, while real scoreless games do',()=>{
   const unplayed = filterGames(archive.games,{team:'not-played'});
   assert.deepEqual(unplayed.map(g=>g.year),[2020,1918,1915,1911]);
   assert.ok(unplayed.every(g=>g.msuScore===null && g.umScore===null));
   assert.deepEqual(summarize(unplayed),{msu:0,um:0,tie:0,total:0});
-  assert.deepEqual(summarize(archive.games),{msu:46,um:76,tie:5,total:127});
+  assert.deepEqual(summarize(archive.games),{msu:46,um:75,tie:5,total:126});
   assert.deepEqual(filterGames(archive.games,{team:'tie'}).map(g=>g.year),[1928,1919,1916,1910,1908]);
   assert.equal(filterGames(archive.games,{search:'pandemic'}).length,1);
   assert.ok(filterGames(archive.games,{sort:'margin'}).slice(-4).every(g=>g.status==='not-played'));
@@ -97,10 +102,9 @@ test('recent updates preserve separate meetings, locations, notes, and chronolog
   assert.deepEqual(recent.map(g=>[g.id,g.msuScore,g.umScore,g.location]),[
     ['2026-1',42,16,'Bozeman'],['2025-2',48,23,'Bozeman'],['2025-1',31,28,'Missoula'],['2024-1',34,11,'Bozeman']
   ]);
-  assert.ok(recent.every(g=>g.notesScope==='game'));
   assert.equal(recent[0].date,'2026-11-21');
   assert.match(recent[0].notes,/582 total yards/);
-  assert.match(recent[1].gameLabel,/Playoff rematch/);
+  assert.equal(recent[1].gameLabel, 'FCS playoff semifinal');
   assert.match(recent[1].notes,/449 total yards/);
   assert.match(recent[2].notes,/Caden Dowler/);
   assert.match(recent[3].notes,/197 yards/);
@@ -113,13 +117,13 @@ test('sourced locations include neutral sites and resolve double-game years',()=
   assert.equal(city('1897-1'),'Missoula');
   assert.equal(city('1908-1'),'Missoula');
   assert.equal(city('1908-2'),'Bozeman');
-  assert.equal(city('1909-2'),'Bozeman');
-  assert.equal(city('1909-1'),'Missoula');
+  assert.equal(city('1909-2'),'Missoula');
+  assert.equal(city('1909-1'),'Bozeman');
   assert.equal(city('1913-2'),'Missoula');
   assert.equal(city('1926-1'),'Butte');
   assert.equal(city('1950-1'),'Butte');
-  assert.equal(city('1951-1'),'Bozeman');
-  assert.ok(filterGames(archive.games,{venue:'Butte'}).every(g=>g.year>=1926 && g.year<=1950));
+  assert.equal(city('1951-1'),'Butte');
+  assert.ok(filterGames(archive.games,{venue:'Butte'}).every(g=>g.year>=1926 && g.year<=1951));
   assert.ok(archive.games.filter(g=>g.status==='not-played').every(g=>g.location===null));
 });
 
@@ -128,7 +132,12 @@ test('game weather follows the matched dates, including the playoff rematch', ()
   assert.equal(rematch.date, '2025-12-20');
   assert.deepEqual([rematch.weather.highF, rematch.weather.lowF], [35, 11]);
   assert.ok(archive.games.filter(game => game.weather).every(game => game.date && game.location));
-  assert.equal(archive.games.find(game => game.id === '1919-2').weather, undefined);
+  assert.equal(archive.games.find(game => game.id === '1897-1').weather, undefined);
+  const newest = archive.games.at(-1);
+  assert.equal(newest.weather.kickoffF, 24);
+  assert.equal(newest.weather.conditions, 'Snow');
+  assert.equal(gameDayTemperature(newest), null);
+  assert.equal(archive.games.filter(game => gameDayTemperature(game) !== null).length, 108);
 });
 
 test('multiple values in one facet combine with other facets and inclusive ranges', () => {

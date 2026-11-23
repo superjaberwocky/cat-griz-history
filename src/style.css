@@ -182,9 +182,88 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
   .archive-tools { gap: .65rem; padding: .75rem; }
 }
 
-.game-weather, #weather-coverage {
+#weather-coverage {
   color: #454f54;
   font-size: .85rem;
   line-height: 1.6;
 }
 #weather-coverage { margin: 0 0 1.2rem; }
+
+.series .official-record {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-size: .9rem;
+}
+
+.game-card .card-top {
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: .4rem .7rem;
+}
+
+.game-card .card-top h3 {
+  margin: 0;
+  font: normal 1.35rem/1.25 Georgia, serif;
+}
+
+.game-card .badge {
+  font-size: .75rem;
+  line-height: 1.25;
+}
+
+.game-card .location {
+  margin-block: .5rem 1rem;
+  font-size: .9rem;
+}
+
+.weather-summary,
+.record-note {
+  margin: .55rem 0 0;
+  color: #454f54;
+  font-size: .875rem;
+  line-height: 1.5;
+}
+
+.weather-summary span {
+  display: block;
+}
+
+.game-details {
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.game-details h4 {
+  margin: .75rem 0 .35rem;
+  font-size: 1rem;
+}
+
+.season-details {
+  display: grid;
+  gap: .75rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr));
+}
+
+.season-details dl,
+.season-details dd {
+  margin: 0;
+}
+
+.season-details dl > div {
+  padding-block: .35rem;
+  border-top: 1px solid #cbbb98;
+}
+
+.season-details dt {
+  font-size: .875rem;
+  color: #454f54;
+}
+
+.record-disagreements ul {
+  margin-top: 0;
+  padding-inline-start: 1.25rem;
+}
+
+.record-disagreements p {
+  margin-bottom: .25rem;
+}

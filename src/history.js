@@ -7,8 +7,16 @@ function victoryMargin(game) {
 }
 
 export function gameDayTemperature(game) {
-  if (game.status === 'not-played' || !game.weather) return null;
+  if (game.status === 'not-played' || !Number.isFinite(game.weather?.highF) || !Number.isFinite(game.weather?.lowF)) return null;
   return (game.weather.highF + game.weather.lowF) / 2;
+}
+
+const calendarDate = new Intl.DateTimeFormat('en-US', {
+  month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC',
+});
+
+export function formatGameDate(date) {
+  return calendarDate.format(new Date(date + 'T00:00:00Z'));
 }
 
 export const gameMetrics = {
@@ -58,7 +66,8 @@ export function filterGames(games, filters = {}) {
     && matchesChoice(venue, g.location || '')
     && (shutout !== 'yes' || (g.status !== 'not-played' && ((g.msuScore === 0) !== (g.umScore === 0))))
     && matchesRanges(g, filters)
-    && (!query || [g.year, g.date, g.location, g.gameLabel, g.notes, g.msuScore, g.umScore].join(' ').toLowerCase().includes(query)))
+    && (!query || [g.year, g.date, g.location, g.date && formatGameDate(g.date), g.gameLabel, g.notes, g.msuScore, g.umScore,
+      ...Object.values(g.msuSeason || {}), ...Object.values(g.umSeason || {}), g.bigSkyChampions].join(' ').toLowerCase().includes(query)))
     .sort((a, b) => {
       if (sort === 'warmest' || sort === 'coldest') {
         const aTemperature = gameDayTemperature(a);
@@ -101,10 +110,13 @@ export function validateGames(games) {
     } else for (const key of ['msuScore', 'umScore']) if (!Number.isInteger(g[key]) || g[key] < 0) throw new Error(`Invalid ${key}: ${g.id}`);
     if (g.location !== null && (typeof g.location !== 'string' || !g.location.trim())) throw new Error(`Missing location: ${g.id}`);
     if (g.weather) {
-      const { highF, lowF, station, source } = g.weather;
+      const { highF, lowF, kickoffF, station, source } = g.weather;
+      const hasDaily = highF != null || lowF != null;
       if (g.status === 'not-played' || !g.date || !g.location
-        || !Number.isFinite(highF) || !Number.isFinite(lowF) || lowF > highF
-        || typeof station !== 'string' || !station.trim()
+        || (!hasDaily && !Number.isFinite(kickoffF))
+        || (kickoffF != null && !Number.isFinite(kickoffF))
+        || (hasDaily && (!Number.isFinite(highF) || !Number.isFinite(lowF) || lowF > highF
+          || typeof station !== 'string' || !station.trim()))
         || typeof source !== 'string' || !source.startsWith('https://')) {
         throw new Error(`Invalid weather record: ${g.id}`);
       }

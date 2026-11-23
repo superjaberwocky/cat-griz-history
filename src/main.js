@@ -1,10 +1,11 @@
 import './style.css';
 import archive from '../data/games.json';
-import { filterGames, gameDayTemperature, gameMetrics, summarize, validateGames, winner } from './history.js';
+import { filterGames, formatGameDate, gameDayTemperature, gameMetrics, summarize, validateGames, winner } from './history.js';
 
 const games = validateGames(archive.games);
 const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const totals = summarize(games);
+const official = games.findLast(game => game.seriesRecord)?.seriesRecord;
 const locations = [...new Set(games.map(g=>g.location).filter(Boolean))].sort();
 const facets = [
   { name: 'team', label: 'Outcome', choices: [['msu', 'Montana State wins'], ['um', 'Montana wins'], ['tie', 'Ties'], ['not-played', 'Not played']], value: winner },
@@ -21,8 +22,8 @@ const ranges = [
 const sortChoices = [
   ['newest', 'Newest first'],
   ['oldest', 'Oldest first'],
-  ['warmest', 'Warmest games'],
-  ['coldest', 'Coldest games'],
+  ['warmest', 'Warmest days'],
+  ['coldest', 'Coldest days'],
   ['margin', 'Largest margin'],
   ['smallest-margin', 'Closest wins'],
   ['points', 'Most combined points'],
@@ -51,9 +52,9 @@ document.querySelector('#app').innerHTML = `
 <a class="skip" href="#archive">Skip to game archive</a>
 <header class="masthead"><a href="#" class="wordmark">CAT<span>–</span>GRIZ<span class="wordmark-sub">THE RIVALRY ARCHIVE</span></a><a href="#about">About the Brawl <span aria-hidden="true">↗</span></a></header>
 <main>
-<section class="hero"><div class="hero-copy"><p class="eyebrow">TWO TEAMS. ONE BIG SKY.</p><h1>A state divided.<br><em>A history shared.</em></h1><p class="intro">Montana State. Montana. More than a century of Saturdays that mean a little more. Explore the games behind the Cat–Griz rivalry.</p><a class="explore" href="#archive">Explore the rivalry <span aria-hidden="true">↓</span></a></div><div class="rivalry-art" aria-label="Montana State Bobcats versus Montana Grizzlies"><div class="mountains" aria-hidden="true"></div><div class="school cats"><span>BOZEMAN, MT</span><strong>STATE</strong><small>MONTANA STATE UNIVERSITY</small></div><div class="versus">VS</div><div class="school griz"><span>MISSOULA, MT</span><strong>MONTANA</strong><small>UNIVERSITY OF MONTANA</small></div><p class="art-caption">THE TREASURE STATE'S DEFINING RIVALRY</p></div></section>
-<section class="series" aria-label="Imported series statistics"><div><span class="eyebrow">THE SERIES AT A GLANCE</span><p>${games.length ? `Through ${Math.max(...games.map(g=>g.year))} · imported records` : 'Historical records awaiting import'}</p></div><div class="stat"><strong>${games.length ? totals.total : '—'}</strong><span>GAMES</span></div><div class="stat cat-stat"><strong>${games.length ? totals.msu : '—'}</strong><span>BOBCAT WINS</span></div><div class="stat griz-stat"><strong>${games.length ? totals.um : '—'}</strong><span>GRIZZLY WINS</span></div><div class="stat"><strong>${games.length ? totals.tie : '—'}</strong><span>TIES</span></div></section>
-<section id="archive" class="archive"><div class="section-title"><div><p class="eyebrow">EVERY SATURDAY HAS A STORY</p><h2>The game archive<span>.</span></h2></div><p>Find your year. Relive the rivalry.</p></div>
+<section class="hero"><div class="hero-copy"><p class="eyebrow">TWO TEAMS. ONE BIG SKY.</p><h1>A state divided.<br><em>A history shared.</em></h1><p class="intro">Montana State. Montana. More than a century of rivalry games. Explore the games behind the Cat–Griz rivalry.</p><a class="explore" href="#archive">Explore the rivalry <span aria-hidden="true">↓</span></a></div><div class="rivalry-art" aria-label="Montana State Bobcats versus Montana Grizzlies"><div class="mountains" aria-hidden="true"></div><div class="school cats"><span>BOZEMAN, MT</span><strong>STATE</strong><small>MONTANA STATE UNIVERSITY</small></div><div class="versus">VS</div><div class="school griz"><span>MISSOULA, MT</span><strong>MONTANA</strong><small>UNIVERSITY OF MONTANA</small></div><p class="art-caption">THE TREASURE STATE'S DEFINING RIVALRY</p></div></section>
+<section class="series" aria-label="Series results on the field"><div><span class="eyebrow">THE SERIES AT A GLANCE</span><p>On-field results through ${archive.updatedThrough}</p></div><div class="stat"><strong>${totals.total}</strong><span>GAMES</span></div><div class="stat cat-stat"><strong>${totals.msu}</strong><span>BOBCAT WINS</span></div><div class="stat griz-stat"><strong>${totals.um}</strong><span>GRIZZLY WINS</span></div><div class="stat"><strong>${totals.tie}</strong><span>TIES</span></div><p class="official-record">Official series wins through ${archive.updatedThrough} · Montana State ${official.officialMsu}, Montana ${official.officialUm}. Montana vacated its 2011 win.</p></section>
+<section id="archive" class="archive"><div class="section-title"><div><p class="eyebrow">RESULTS AND STORIES</p><h2>The game archive<span>.</span></h2></div><p>Find your year. Relive the rivalry.</p></div>
 <div class="archive-tools" role="search" aria-label="Search and sort historical games">
   <label>Search the archive<input form="filters" name="search" type="search" placeholder="Year, place, or keyword"></label>
   <label>Sort by<select id="sort" form="filters" name="sort">${sortChoices.map(([value, label]) => `<option value="${value}">${label}</option>`).join('')}</select></label>
@@ -78,7 +79,7 @@ document.querySelector('#app').innerHTML = `
   </div>
 </div>
 </section>
-<section id="about" class="about"><p class="eyebrow">RIVALRY HISTORY</p><h2>About the Brawl</h2><div><p>The Brawl of the Wild is the football rivalry between the University of Montana Grizzlies and the Montana State University Bobcats. First played in 1897, it is also known as Cat–Griz or Griz–Cat. The Brawl of the Wild name has been used to promote the game since 1997.</p><p>Both universities became charter members of the Big Sky Conference in 1963. Since 1993, their regular-season meeting has served as the season finale, often influencing the conference championship and playoff qualification. Montana won 16 consecutive meetings from 1986 through 2001; Montana State ended that run in 2002.</p><p>Games are now hosted at Bobcat Stadium in Bozeman and Washington–Grizzly Stadium in Missoula. Butte hosted the series from 1926 through 1950, with an interruption during World War II.</p><p>The Great Divide Trophy, introduced in 2001 and created by sculptor Dave Samuelson, takes its name from the Continental Divide separating the universities. In December 2025, the teams met in the FCS semifinals for their first playoff matchup.</p><p class="fine">Historical overview and game locations: <a href="https://en.wikipedia.org/wiki/Montana%E2%80%93Montana_State_football_rivalry">Wikipedia: Montana–Montana State football rivalry</a>.</p></div></section>
+<section id="about" class="about"><p class="eyebrow">RIVALRY HISTORY</p><h2>About the Brawl</h2><div><p>The Brawl of the Wild is the football rivalry between the University of Montana Grizzlies and the Montana State University Bobcats. First played in 1897, it is also known as Cat–Griz or Griz–Cat. The Brawl of the Wild name has been used to promote the game since 1997.</p><p>Both universities became charter members of the Big Sky Conference in 1963. Since 1993, their regular-season meeting has served as the season finale, often influencing the conference championship and playoff qualification. Montana won 16 consecutive meetings from 1986 through 2001; Montana State ended that run in 2002.</p><p>Games are now hosted at Bobcat Stadium in Bozeman and Washington–Grizzly Stadium in Missoula. Butte hosted the series from 1926 through 1951, with an interruption during World War II.</p><p>The Great Divide Trophy, introduced in 2001 and created by sculptor Dave Samuelson, takes its name from the Continental Divide separating the universities. In December 2025, the teams met in the FCS semifinals for their first playoff matchup.</p><p class="fine">The archive’s dates, scores, locations, season records, and weather follow the supplied Cat–Griz history dataset. When sources disagree, the game card shows the archive’s selected result and lists other accounts in the details. The archive lists one meeting in 1919, a 6–6 tie.</p><p class="fine">Further reading · ${Object.entries(archive.sources).map(([name, url]) => `<a href="${escape(url)}">${escape(name)}</a>`).join(' · ')} · <a href="https://www.hypercrit.net/catgriz/">Original Cat–Griz archive</a></p></div></section>
 </main><footer><span>CAT–GRIZ <small>THE RIVALRY ARCHIVE</small></span><a href="#">Back to top ↑</a></footer>`;
 const form = document.querySelector('#filters');
 const sort = document.querySelector('#sort');
@@ -132,6 +133,69 @@ function updateSortOptions(filters, matches) {
   for (const option of sort.options) {
     option.hidden = option.value !== sort.value && availability[option.value] === false;
   }
+}
+
+const seasonLabels = {
+  coach: 'Head coach',
+  record: 'Season record',
+  conference: 'Conference',
+  division: 'Division or association',
+  titles: 'Conference titles through this season',
+  postseason: 'Postseason',
+  homeStadium: 'Home stadium',
+};
+
+function seasonDetails(team, season) {
+  return `<div><h4>${team}</h4><dl>${Object.entries(seasonLabels).filter(([key]) => season[key]).map(([key, label]) =>
+    `<div><dt>${label}</dt><dd>${escape(season[key])}</dd></div>`
+  ).join('')}</dl></div>`;
+}
+
+function gameWeather(game, weatherSort) {
+  const weather = game.weather;
+  if (!weather) return '<p class="weather-summary">Weather unavailable</p>';
+  const midpoint = gameDayTemperature(game);
+  const kickoff = weather.kickoffF == null ? '' :
+    `<span><strong>${weather.kickoffF}°F</strong> at kickoff${weather.conditions ? ` · ${escape(weather.conditions)}` : ''}</span>`;
+  const daily = midpoint === null ? '' :
+    `<span>Daily high <strong>${weather.highF}°F</strong> · Low <strong>${weather.lowF}°F</strong></span>`;
+  const ranking = weatherSort && midpoint !== null ? `<span>Daily midpoint ${midpoint}°F</span>` : '';
+  return `<p class="weather-summary">${kickoff}${daily}${ranking}</p>`;
+}
+
+function recordDisagreements(disagreements) {
+  if (!disagreements) return '';
+  return `<div class="record-disagreements"><h4>Where sources disagree</h4>${Object.entries(disagreements).map(([field, accounts]) =>
+    `<p><strong>${escape(field)}</strong></p><ul>${accounts.map(({ source, value }) => {
+      const display = field === 'Date' && /^\d{4}-\d{2}-\d{2}$/.test(value) ? formatGameDate(value) : value;
+      return `<li>${escape(source)} · ${escape(display)}</li>`;
+    }).join('')}</ul>`
+  ).join('')}</div>`;
+}
+
+function gameCard(game, result, weatherSort) {
+  const { date, weather, seriesRecord } = game;
+  const badge = result === 'tie' ? 'Tie game' : result === 'msu' ? 'Bobcat win' : 'Grizzly win';
+  const location = escape(game.location) + (game.neutral ? ' · Neutral site' : '');
+  const weatherSource = weather ? `<p>Weather source · <a href="${escape(weather.source)}">${escape(weather.station || 'Montana State Athletics')}</a>${weather.station ? ' · Daily station readings' : ''}</p>` : '';
+  return `<article class="game-card ${result}">
+    <div class="card-top"><h3><time datetime="${escape(date)}">${formatGameDate(date)}</time></h3><span class="badge">${badge}</span></div>
+    <p class="location">${location}${game.gameLabel !== 'Regular season' ? ` · ${escape(game.gameLabel)}` : ''}</p>
+    <div class="score ${result === 'msu' ? 'winning' : ''}"><span>Montana State</span><strong>${game.msuScore}</strong></div>
+    <div class="score ${result === 'um' ? 'winning' : ''}"><span>Montana</span><strong>${game.umScore}</strong></div>
+    ${game.vacated ? '<p class="record-note">Montana later vacated this win.</p>' : ''}
+    ${game.dateDisputed ? '<p class="record-note">Historical sources give different dates.</p>' : ''}
+    ${gameWeather(game, weatherSort)}
+    <details class="game-details"><summary>Game and season details</summary>
+      ${game.notes ? `<p>${escape(game.notes)}</p>` : ''}
+      <p>On-field series record after this game · Montana State ${seriesRecord.msu} wins, Montana ${seriesRecord.um} wins, ${seriesRecord.tie} ${seriesRecord.tie === 1 ? 'tie' : 'ties'}.</p>
+      ${seriesRecord.um !== seriesRecord.officialUm ? `<p>Official wins through this game · Montana State ${seriesRecord.officialMsu}, Montana ${seriesRecord.officialUm}.</p>` : ''}
+      <div class="season-details">${seasonDetails('Montana State', game.msuSeason)}${seasonDetails('Montana', game.umSeason)}</div>
+      ${game.bigSkyChampions ? `<p><strong>Big Sky champions</strong> · ${escape(game.bigSkyChampions)}</p>` : ''}
+      ${weatherSource}
+      ${recordDisagreements(game.disagreements)}
+    </details>
+  </article>`;
 }
 
 function renderFacets(filters) {
@@ -190,7 +254,7 @@ function render(sync = true) {
   coverage.hidden = !weatherSort;
   if (weatherSort) {
     const ranked = filtered.filter(game => gameDayTemperature(game) !== null).length;
-    coverage.textContent = `${ranked} of ${played} games have weather records. Rankings use the midpoint of the station’s daily high and low. Games without a reading appear last.`;
+    coverage.textContent = `${ranked} of ${played} games have a daily high and low. Rankings use the midpoint of those station readings. Games without both readings appear last.`;
   }
   const unplayed = filtered.length - played;
   count.textContent = `${played} ${played === 1 ? 'game' : 'games'} played${unplayed ? ` · ${unplayed} not played` : ''}`;
@@ -201,18 +265,7 @@ function render(sync = true) {
   document.querySelector('#results').innerHTML = !games.length ? `<div class="empty"><span class="empty-symbol" aria-hidden="true">↗</span><h3>The next chapter starts here.</h3><p>The original archive is awaiting import. Historical scores will appear here once the source records have been retrieved and verified.</p><a href="https://www.hypercrit.net/catgriz/">Visit the original archive ↗</a></div>` : !filtered.length ? `<div class="empty"><h3>No games match these filters.</h3><p>Try another year, winner, or location, or reset the filters.</p></div>` : filtered.map(g=> {
     const result = winner(g);
     if (result === 'not-played') return `<article class="game-card not-played"><div class="card-top"><span>${g.year}</span><span class="badge">NOT PLAYED</span></div><h3>A pause in the rivalry</h3><p class="interruption-note">${escape(g.notes)}</p></article>`;
-    const temperature = gameDayTemperature(g);
-    const weather = temperature === null
-      ? (weatherSort ? '<p class="game-weather">Game-day weather unavailable</p>' : '')
-      : `<p class="game-weather"><strong>${temperature}°F</strong> game-day midpoint · High ${g.weather.highF}°F · Low ${g.weather.lowF}°F<br><a href="${escape(g.weather.source)}">${escape(g.weather.station)}</a></p>`;
-    const sharedNotes = g.notesScope === 'year' && g.gamesInYear > 1;
-    const narrative = g.notes
-      ? `<p>${sharedNotes ? '<strong>Year notes (shared by both games)</strong><br>' : ''}${escape(g.notes)}</p>`
-      : '';
-    const notes = narrative || weather
-      ? `<details><summary>Game notes</summary>${narrative}${weather}</details>`
-      : '';
-    return `<article class="game-card ${result}"><div class="card-top"><span>${g.year}</span><span class="badge">${result === 'tie' ? 'TIE GAME' : result === 'msu' ? 'BOBCAT WIN' : 'GRIZZLY WIN'}</span></div><p class="location">${g.gamesInYear > 1 ? `Game ${g.sourceGame} of ${g.gamesInYear} · ` : ''}${g.gameLabel ? `${escape(g.gameLabel)} · ` : ''}${escape(g.location || 'Location not recorded')}${g.date ? ` · ${escape(g.date)}` : ''}</p><div class="score ${result === 'msu' ? 'winning' : ''}"><span>Montana State <small>BOBCATS</small></span><strong>${g.msuScore}</strong></div><div class="score ${result === 'um' ? 'winning' : ''}"><span>Montana <small>GRIZZLIES</small></span><strong>${g.umScore}</strong></div>${notes}</article>`;
+    return gameCard(g, result, weatherSort);
   }).join('');
   if (sync) syncUrl(filters);
 }
