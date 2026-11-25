@@ -2350,6 +2350,42 @@
       }
     },
     {
+      "id": "1942-1",
+      "year": 1942,
+      "status": "not-played",
+      "location": null,
+      "msuScore": null,
+      "umScore": null,
+      "notes": "The teams did not meet because of World War II."
+    },
+    {
+      "id": "1943-1",
+      "year": 1943,
+      "status": "not-played",
+      "location": null,
+      "msuScore": null,
+      "umScore": null,
+      "notes": "The teams did not meet because of World War II."
+    },
+    {
+      "id": "1944-1",
+      "year": 1944,
+      "status": "not-played",
+      "location": null,
+      "msuScore": null,
+      "umScore": null,
+      "notes": "The teams did not meet because of World War II."
+    },
+    {
+      "id": "1945-1",
+      "year": 1945,
+      "status": "not-played",
+      "location": null,
+      "msuScore": null,
+      "umScore": null,
+      "notes": "The teams did not meet because of World War II."
+    },
+    {
       "id": "1946-1",
       "year": 1946,
       "status": "played",

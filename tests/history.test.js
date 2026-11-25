@@ -53,7 +53,7 @@ test('import validation rejects duplicate games and invalid scores',()=>{
 const archive = JSON.parse((await import('node:fs')).readFileSync(new URL('../data/games.json', import.meta.url), 'utf8'));
 test('CSV corrections replace legacy dates, scores, and locations', () => {
   validateGames(archive.games);
-  assert.equal(archive.games.length, 130);
+  assert.equal(archive.games.length, 134);
   const list = archive.games.filter(game => game.status === 'played');
   assert.deepEqual(list.map(game => game.seriesGame), Array.from({ length: 126 }, (_, i) => i + 1));
   const corrected = Object.fromEntries(list.map(game =>
@@ -80,13 +80,13 @@ test('the vacated Montana win counts only in on-field series totals', () => {
 
 test('unplayed placeholders do not become ties, while real scoreless games do',()=>{
   const unplayed = filterGames(archive.games,{team:'not-played'});
-  assert.deepEqual(unplayed.map(g=>g.year),[2020,1918,1915,1911]);
+  assert.deepEqual(unplayed.map(g=>g.year),[2020,1945,1944,1943,1942,1918,1915,1911]);
   assert.ok(unplayed.every(g=>g.msuScore===null && g.umScore===null));
   assert.deepEqual(summarize(unplayed),{msu:0,um:0,tie:0,total:0});
   assert.deepEqual(summarize(archive.games),{msu:46,um:75,tie:5,total:126});
   assert.deepEqual(filterGames(archive.games,{team:'tie'}).map(g=>g.year),[1928,1919,1916,1910,1908]);
   assert.equal(filterGames(archive.games,{search:'pandemic'}).length,1);
-  assert.ok(filterGames(archive.games,{sort:'margin'}).slice(-4).every(g=>g.status==='not-played'));
+  assert.ok(filterGames(archive.games,{sort:'margin'}).slice(-unplayed.length).every(g=>g.status==='not-played'));
 });
 test('both meetings in 1898 are searchable and independently filterable',()=>{
   const entries = filterGames(archive.games,{search:'1898',sort:'oldest'});

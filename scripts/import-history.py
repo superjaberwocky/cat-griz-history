@@ -13,6 +13,10 @@ INTERRUPTIONS = {
     1911: 'The game was canceled after Montana State player Charles Lange died from a football injury.',
     1915: 'Montana State declined to play. The rivalry resumed in 1916.',
     1918: 'The teams did not meet during the final year of World War I.',
+    1942: 'The teams did not meet because of World War II.',
+    1943: 'The teams did not meet because of World War II.',
+    1944: 'The teams did not meet because of World War II.',
+    1945: 'The teams did not meet because of World War II.',
     2020: 'The game was canceled during the COVID-19 pandemic.',
 }
 TEAMS = {'MSU': 'Montana State', 'UM': 'Montana', 'EWU': 'Eastern Washington'}
