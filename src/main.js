@@ -174,7 +174,7 @@ function recordDisagreements(disagreements) {
 }
 
 function gameCard(game, result, weatherSort) {
-  const { date, weather, seriesRecord } = game;
+  const { date, weather, notes, notesScope } = game;
   const badge = result === 'tie' ? 'Tie game' : result === 'msu' ? 'Bobcat win' : 'Grizzly win';
   const location = escape(game.location) + (game.neutral ? ' · Neutral site' : '');
   const weatherSource = weather ? `<p>Weather source · <a href="${escape(weather.source)}">${escape(weather.station || 'Montana State Athletics')}</a>${weather.station ? ' · Daily station readings' : ''}</p>` : '';
@@ -187,9 +187,7 @@ function gameCard(game, result, weatherSort) {
     ${game.dateDisputed ? '<p class="record-note">Historical sources give different dates.</p>' : ''}
     ${gameWeather(game, weatherSort)}
     <details class="game-details"><summary>Game and season details</summary>
-      ${game.notes ? `<p>${escape(game.notes)}</p>` : ''}
-      <p>On-field series record after this game · Montana State ${seriesRecord.msu} wins, Montana ${seriesRecord.um} wins, ${seriesRecord.tie} ${seriesRecord.tie === 1 ? 'tie' : 'ties'}.</p>
-      ${seriesRecord.um !== seriesRecord.officialUm ? `<p>Official wins through this game · Montana State ${seriesRecord.officialMsu}, Montana ${seriesRecord.officialUm}.</p>` : ''}
+      ${notes ? `<p>${notesScope === 'year' ? '<strong>Year notes (shared by both games)</strong><br>' : ''}${escape(notes)}</p>` : ''}
       <div class="season-details">${seasonDetails('Montana State', game.msuSeason)}${seasonDetails('Montana', game.umSeason)}</div>
       ${game.bigSkyChampions ? `<p><strong>Big Sky champions</strong> · ${escape(game.bigSkyChampions)}</p>` : ''}
       ${weatherSource}

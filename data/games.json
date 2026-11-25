@@ -37,7 +37,7 @@
         "officialMsu": 0,
         "officialUm": 1
       },
-      "notes": "Montana won the first meeting in Missoula. The original archive puts the crowd at about 200.",
+      "notes": "The series begins on Thanksgiving Day as the “Varsity” wins in Missoula. Bozeman's captain dislocated his jaw but popped it back in and kept playing. The game drew 200 fans.",
       "disagreements": {
         "Date": [
           {
@@ -111,7 +111,8 @@
         "officialMsu": 0,
         "officialUm": 2
       },
-      "notes": "The original archive describes a crowd of about 700 at Butler Field in Bozeman, where there were no bleachers.",
+      "notes": "Montana earns season sweep with a pair of shutouts. The first game in Bozeman drew 700 fans to Butler Field, where there were no bleachers.",
+      "notesScope": "year",
       "disagreements": {
         "Date": [
           {
@@ -185,6 +186,8 @@
         "officialMsu": 0,
         "officialUm": 3
       },
+      "notes": "Montana earns season sweep with a pair of shutouts. The first game in Bozeman drew 700 fans to Butler Field, where there were no bleachers.",
+      "notesScope": "year",
       "disagreements": {
         "Date": [
           {
@@ -236,6 +239,8 @@
         "officialMsu": 1,
         "officialUm": 3
       },
+      "notes": "MSC returns favor a year later and begins six-game winning streak. Missoula player becomes first knocked unconscious by a blow to the chest.",
+      "notesScope": "year",
       "disagreements": {
         "Date": [
           {
@@ -309,6 +314,8 @@
         "officialMsu": 2,
         "officialUm": 3
       },
+      "notes": "MSC returns favor a year later and begins six-game winning streak. Missoula player becomes first knocked unconscious by a blow to the chest.",
+      "notesScope": "year",
       "disagreements": {
         "Date": [
           {
@@ -382,6 +389,7 @@
         "officialMsu": 3,
         "officialUm": 3
       },
+      "notes": "A missed extra point with five minutes to go is the difference. A Missoula player knocks out a Bozeman player with a punch.",
       "disagreements": {
         "Date": [
           {
@@ -455,6 +463,7 @@
         "officialMsu": 4,
         "officialUm": 3
       },
+      "notes": "MSC takes lead in series for first time. Game featured a touchdown on a missed field goal attempt and Bozeman fans guarding the end zone.",
       "disagreements": {
         "Date": [
           {
@@ -530,6 +539,7 @@
         "officialMsu": 5,
         "officialUm": 3
       },
+      "notes": "Will Flaherty scores four TDs.",
       "disagreements": {
         "Date": [
           {
@@ -583,6 +593,7 @@
         "officialMsu": 6,
         "officialUm": 3
       },
+      "notes": "MSC's win earns a tie with Montana School of Mines for state title.",
       "disagreements": {
         "Date": [
           {
@@ -658,6 +669,7 @@
         "officialMsu": 6,
         "officialUm": 4
       },
+      "notes": "Emil Adams scores four TDs for Montana in remarkable scoring display before forward passes were allowed. Touchdowns still count for just five points and rules state teams that surrender touchdowns kick off. It's the last game between the schools until 1908; MSC plays four games in '05, but abolishes football before the Griz game for fear of another lopsided defeat.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly",
         "highF": 52,
@@ -698,6 +710,8 @@
         "officialMsu": 6,
         "officialUm": 4
       },
+      "notes": "MSC opens and ends season with games against Montana and rebounds with pair of shutouts after blowout loss.",
+      "notesScope": "year",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly",
         "highF": 70,
@@ -738,6 +752,8 @@
         "officialMsu": 7,
         "officialUm": 4
       },
+      "notes": "MSC opens and ends season with games against Montana and rebounds with pair of shutouts after blowout loss.",
+      "notesScope": "year",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00241044.dly",
         "highF": 59,
@@ -778,7 +794,8 @@
         "officialMsu": 7,
         "officialUm": 5
       },
-      "notes": "Ed Winstanley kicked the only field goal of the game to give Montana a 3–0 win.",
+      "notes": "Ed Winstanley, who missed his previous four tries, kicks a field goal for only points in first game to help Griz earn sweep; Cats don't win again until 1929.",
+      "notesScope": "year",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00241044.dly",
         "highF": 38,
@@ -819,6 +836,8 @@
         "officialMsu": 7,
         "officialUm": 6
       },
+      "notes": "Ed Winstanley, who missed his previous four tries, kicks a field goal for only points in first game to help Griz earn sweep; Cats don't win again until 1929.",
+      "notesScope": "year",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly",
         "highF": 53,
@@ -883,6 +902,8 @@
         "officialMsu": 7,
         "officialUm": 6
       },
+      "notes": "MSC's Donald Williams misses two field goal attempts in scoreless draw. Meeting in 1911 is called off after one of MSC's players dies.",
+      "notesScope": "year",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00241044.dly",
         "highF": 34,
@@ -943,6 +964,8 @@
         "officialMsu": 7,
         "officialUm": 7
       },
+      "notes": "MSC's Donald Williams misses two field goal attempts in scoreless draw. Meeting in 1911 is called off after one of MSC's players dies.",
+      "notesScope": "year",
       "disagreements": {
         "Date": [
           {
@@ -971,7 +994,7 @@
       "location": null,
       "msuScore": null,
       "umScore": null,
-      "notes": "The game was canceled after Montana State player Charles Lange died from a football injury."
+      "notes": "Game canceled following the football-related death of MSC player Charles Lange."
     },
     {
       "id": "1912-1",
@@ -1006,6 +1029,8 @@
         "officialMsu": 7,
         "officialUm": 8
       },
+      "notes": "Merritt Owsley's 190 rushing yards stand as a series high until MSU's Don Hass ran for 209 in '67.",
+      "notesScope": "year",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00241044.dly",
         "highF": 61,
@@ -1047,6 +1072,8 @@
         "officialMsu": 7,
         "officialUm": 9
       },
+      "notes": "Merritt Owsley's 190 rushing yards stand as a series high until MSU's Don Hass ran for 209 in '67.",
+      "notesScope": "year",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly",
         "highF": 60,
@@ -1088,6 +1115,8 @@
         "officialMsu": 7,
         "officialUm": 10
       },
+      "notes": "Winning continues as school renames itself the State University of Montana.",
+      "notesScope": "year",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00241044.dly",
         "highF": 60,
@@ -1129,6 +1158,8 @@
         "officialMsu": 7,
         "officialUm": 11
       },
+      "notes": "Winning continues as school renames itself the State University of Montana.",
+      "notesScope": "year",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly",
         "highF": 39,
@@ -1194,6 +1225,7 @@
         "officialMsu": 7,
         "officialUm": 12
       },
+      "notes": "Bobcats score the only points surrendered by Griz all season.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly",
         "highF": 48,
@@ -1233,7 +1265,7 @@
       "location": null,
       "msuScore": null,
       "umScore": null,
-      "notes": "Montana State declined to play. The rivalry resumed in 1916."
+      "notes": "MSC refused to play MSU (UM), which had earlier tied against powerhouse Syracuse. Missoula pondered never playing MSC again, and eventually Bozeman asks for a game in 1916."
     },
     {
       "id": "1916-1",
@@ -1268,6 +1300,7 @@
         "officialMsu": 7,
         "officialUm": 12
       },
+      "notes": "Losing ways end for MSC as Cats score late to earn tie.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00241044.dly",
         "highF": 8,
@@ -1330,7 +1363,8 @@
         "tie": 3,
         "officialMsu": 7,
         "officialUm": 13
-      }
+      },
+      "notes": "MSC debuts in Rocky Mountain Conference, but Griz score late for victory."
     },
     {
       "id": "1918-1",
@@ -1339,7 +1373,7 @@
       "location": null,
       "msuScore": null,
       "umScore": null,
-      "notes": "The teams did not meet during the final year of World War I."
+      "notes": "Game not played due to World War I."
     },
     {
       "id": "1919-1",
@@ -1376,7 +1410,7 @@
         "officialMsu": 7,
         "officialUm": 13
       },
-      "notes": "The teams played to a 6–6 tie in their first meeting after World War I.",
+      "notes": "After World War I ends, teams play to a fourth tie.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00241044.dly",
         "highF": 47,
@@ -1439,7 +1473,8 @@
         "tie": 4,
         "officialMsu": 7,
         "officialUm": 14
-      }
+      },
+      "notes": "Bernie Bierman scores four touchdowns in the first game played at Dornblaser Field in front of 3,000 fans."
     },
     {
       "id": "1921-1",
@@ -1476,6 +1511,7 @@
         "officialMsu": 7,
         "officialUm": 15
       },
+      "notes": "Grizzlies end MSC's five-year unbeaten streak at Gatton Field. Steve Sullivan and Ted Plummer score for the Grizzlies. Roy McCarren reaches the end zone for MSC.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00241044.dly",
         "highF": 62,
@@ -1518,7 +1554,8 @@
         "tie": 4,
         "officialMsu": 7,
         "officialUm": 16
-      }
+      },
+      "notes": "Montana wins on final play, but not without controversy. According to MSC coach Ott Romney, time had expired before Montana scored a touchdown. Each school had a timekeeper. UM's official timekeeper said five seconds remained; MSC's said the final play started 30 seconds too late. The referee ruled that since the gun had not been fired, the touchdown – and ensuing extra point – would stand. Romney says afterward: “In the eyes of God and in 60 minutes of play, we won that game.”"
     },
     {
       "id": "1923-1",
@@ -1555,6 +1592,7 @@
         "officialMsu": 7,
         "officialUm": 17
       },
+      "notes": "MSC scores in double figures for the first time since 1919 and finish 5-4, but Grizzlies continue win streak. Ted Illman scores twice for the Griz. Floyd Romney kicks two field goals for Bobcats.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00241044.dly",
         "highF": 54,
@@ -1598,6 +1636,7 @@
         "officialMsu": 7,
         "officialUm": 18
       },
+      "notes": "“Wild” Bill Kelly scores four times and runs for 211 yards for the Grizzlies, who recently joined the Pacific Coast Conference. Both teams throw three interceptions and Montana fumbles four times.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly",
         "highF": 36,
@@ -1665,7 +1704,7 @@
         "officialMsu": 7,
         "officialUm": 19
       },
-      "notes": "In the first Butte meeting, Kelly returned a punt for a touchdown and kicked three extra points for Montana.",
+      "notes": "Kelly reaches end zone three more times; Griz begin successful run in Butte. Kelly returned a punt for a touchdown and kicked three extra points.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024135.dly",
         "highF": 59,
@@ -1709,6 +1748,7 @@
         "officialMsu": 7,
         "officialUm": 20
       },
+      "notes": "Ott Romney's final game as MSC coach. Clarence Coyle's touchdown reception is the game's only score.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024135.dly",
         "highF": 45,
@@ -1752,6 +1792,7 @@
         "officialMsu": 7,
         "officialUm": 20
       },
+      "notes": "First scoreless tie since 1910 as 8,000 fans attend. Cats haven't defeated Griz in 20 years, but stop Montana at 5-yard line late in first half. ",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024135.dly",
         "highF": 53,
@@ -1795,6 +1836,7 @@
         "officialMsu": 8,
         "officialUm": 20
       },
+      "notes": "Twenty years of losses end when Montana's final drive falls short at the Bobcat 5-yard line. Ivar Twilde and Gus Wylie combine for 71 rushing yards for MSC. Max Worthington scores both of the BobCats touchdowns. The Griz get to the Cat 5-yard line late in the game but are held off.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024135.dly",
         "highF": 52,
@@ -1839,6 +1881,7 @@
         "officialMsu": 8,
         "officialUm": 21
       },
+      "notes": "The Bobcats block three punts by Harlem's Waldo Ekegren scores twice during the first half to put Montana back on the winning track. This marks the first year electric loudspeakers were used at the game.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024135.dly",
         "highF": 58,
@@ -1883,6 +1926,7 @@
         "officialMsu": 8,
         "officialUm": 22
       },
+      "notes": "Lowell Dailey scores four TDs on Halloween. ",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024135.dly",
         "highF": 62,
@@ -1927,6 +1971,7 @@
         "officialMsu": 9,
         "officialUm": 22
       },
+      "notes": "Louis Edwards scores the go-ahead touchdown in the fourth quarter and Ray Buzzetti scores twice.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024135.dly",
         "highF": 56,
@@ -1995,6 +2040,7 @@
         "officialMsu": 9,
         "officialUm": 23
       },
+      "notes": "The Griz score four touchdowns in the fourth quarter. The Cats don't score again in the series until 1941.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024135.dly",
         "highF": 27,
@@ -2039,6 +2085,7 @@
         "officialMsu": 9,
         "officialUm": 24
       },
+      "notes": "Quarterback Hank Blastic scores two TDs. Griz also win cross-country race held at halftime.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024135.dly",
         "highF": 60,
@@ -2083,6 +2130,7 @@
         "officialMsu": 9,
         "officialUm": 25
       },
+      "notes": "Blastic reaches the end zone once and passes for another score. Cats fail to make it inside Montana's 30-yard line.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024135.dly",
         "highF": 67,
@@ -2127,6 +2175,7 @@
         "officialMsu": 9,
         "officialUm": 26
       },
+      "notes": "Two touchdowns from Milt Popovich on punt returns hand Griz another win.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024135.dly",
         "highF": 50,
@@ -2171,6 +2220,7 @@
         "officialMsu": 9,
         "officialUm": 27
       },
+      "notes": "Montana stays undefeated on season behind another two TDs from Popovich. Paul Szakash kicks two field goals and intercepts a pass.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024135.dly",
         "highF": 66,
@@ -2216,6 +2266,7 @@
         "officialMsu": 9,
         "officialUm": 28
       },
+      "notes": "Two Anaconda natives, Bill Lazetich and Fred Jenkin, score for the Griz.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024135.dly",
         "highF": 23,
@@ -2259,7 +2310,8 @@
         "tie": 5,
         "officialMsu": 9,
         "officialUm": 29
-      }
+      },
+      "notes": "A record 8,500 show up at Butte High to see Montana hold the Cats to 47 total yards. Evan Roberts scores lone TD. Roger Lundberg intercepts a pass and recovers a fumble. "
     },
     {
       "id": "1940-1",
@@ -2297,6 +2349,7 @@
         "officialMsu": 9,
         "officialUm": 30
       },
+      "notes": "Griz enter game being shut out in five of previous seven games during season, but blank Bobcats again. Jack Swarthout is ejected for throwing a punch. Don Bryan notches lone touchdown. Newell Berg intercepts a pass for Cats.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024135.dly",
         "highF": 71,
@@ -2341,6 +2394,7 @@
         "officialMsu": 9,
         "officialUm": 31
       },
+      "notes": "Bobcats break through with first points since '32 and lead 13-0 at one point. Cats break long scoring drought vs. Griz when quarterback Jinx Anderson laterals to Bill Zupan, who passes to Anderson for a 40-yard touchdown. Jim Peterson later snatches the ball from Montana QB Eso Naranche's hand and runs 60 yards for a touchdown. Naranche scores two times for Griz. Six weeks later, Japan attacks Pearl Harbor and the teams don't play again until 46.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024135.dly",
         "highF": 60,
@@ -2422,6 +2476,7 @@
         "officialMsu": 9,
         "officialUm": 32
       },
+      "notes": "After a war which took the lives over several players on both sides, Montana wins 10th straight in the series as 10,000 fans watch at Butte High. Bill Reynolds scores twice for Griz and Cats are picked off four times. Future MSU athletic director Gene Bourdet throws a 33-yard touchdown pass for Cats only score. Bobcats play later that season in Harbour Bowl.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024135.dly",
         "highF": 51,
@@ -2468,6 +2523,7 @@
         "officialMsu": 10,
         "officialUm": 32
       },
+      "notes": "Former Grizzly halfback Barney Berger kicks decisive extra point and the Cats end another long losing streak in the series' 50th anniversary. Buck Preuninger misses his first two PATs of the season for Montana. Harry Perrigo and John Heine reach end zone for Montana State.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024135.dly",
         "highF": 64,
@@ -2512,6 +2568,7 @@
         "officialMsu": 10,
         "officialUm": 33
       },
+      "notes": "Another streak begins for the Grizzlies; John Helding runs and throws for touchdowns in front of 10,000 at Butte High.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024135.dly",
         "highF": 38,
@@ -2556,6 +2613,7 @@
         "officialMsu": 10,
         "officialUm": 34
       },
+      "notes": "The teams play at new Naranche Field in Butte, but the result is the same. Cats pile up 180 rushing yards, but Ray Bauer catches two touchdown passes for Griz. Adam Marshall scores twice for Montana State.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024135.dly",
         "highF": 44,
@@ -2600,6 +2658,7 @@
         "officialMsu": 10,
         "officialUm": 35
       },
+      "notes": "The Butte years mercifully come to an end for Cats, who lose 18 of the 22 games played in the Mining City. Griz score 27 first-half points on Halloween behind Tom Kingsford's 265 passing yards.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024135.dly",
         "highF": 45,
@@ -2644,6 +2703,7 @@
         "officialMsu": 10,
         "officialUm": 36
       },
+      "notes": "First game in Bozeman in 28 years goes to the Griz as rain pummels Gatton Field. Griz score three first-quarter touchdowns as Cats finish season winless.",
       "disagreements": {
         "Location": [
           {
@@ -2705,6 +2765,7 @@
         "officialMsu": 10,
         "officialUm": 37
       },
+      "notes": "Montana intercepts five passes and rushes for 378 yards. Montana State quarterback Jack Moore throws two touchdowns passes.",
       "disagreements": {
         "Location": [
           {
@@ -2750,6 +2811,7 @@
         "officialMsu": 10,
         "officialUm": 38
       },
+      "notes": "Montana State leads 13-0 but Griz storm back by running an MSU coach and athletic director Tom Parac scores on of two touchdowns for Bobcats.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly",
         "highF": 51,
@@ -2795,6 +2857,7 @@
         "officialMsu": 10,
         "officialUm": 39
       },
+      "notes": "Cats enter game unbeaten and hold Griz under 30 points for the first time since '48, but Montana scores on its first play from scrimmage when Mundo Campbell reaches the end zone on a 61-yard run. Bobcats lead 14-6 on Frank Landon's TD reception before Griz quickly score twice before halftime.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly",
         "highF": 53,
@@ -2863,6 +2926,7 @@
         "officialMsu": 10,
         "officialUm": 40
       },
+      "notes": "Bobcats complete just two passes in the mud in Bozeman and Griz quarterback Norman Kampschror tosses a pair of touchdowns.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly",
         "highF": 45,
@@ -2909,6 +2973,7 @@
         "officialMsu": 11,
         "officialUm": 40
       },
+      "notes": "The tide begins to turn in Montana State's favor. After winning just five times over the previous 52 years against the Griz, Bobcats begin string in which they'll take 22 of the next 30 meetings. Don Edwards runs in scores of 7 and 1 yards in Missoula and Ron Warzeka recovers a late fumble for MSU, which goes on to win national title in Sonny Holland's first season as a player.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly",
         "highF": 42,
@@ -2953,6 +3018,7 @@
         "officialMsu": 12,
         "officialUm": 40
       },
+      "notes": "Bobcats win successive meetings for the first time since 1902-03 behind TDs from Bob Rudio and Rocco Perciavalle.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly",
         "highF": 46,
@@ -2997,6 +3063,7 @@
         "officialMsu": 13,
         "officialUm": 40
       },
+      "notes": "Griz finish season 0-10 as Perciavalle piles up 130 yards and picks off a pass for Bobcats. Jim McLeod also reaches end zone for MSU. Bobcat fans tear down goal posts at Dornblaser Field and fights break out after game.",
       "disagreements": {
         "Date": [
           {
@@ -3054,6 +3121,7 @@
         "officialMsu": 14,
         "officialUm": 40
       },
+      "notes": "Bobcats total 313 yards on the ground and Griz manage just 15 rushing yards. Perciavalle and McLeod score again for MSU. McLeod returns an interception 86 yards for a 14-0 lead at the half. It was the BobCats longest such pick return in history until McLeod's son, Mike, breaks it two decades later.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly",
         "highF": 49,
@@ -3098,6 +3166,7 @@
         "officialMsu": 14,
         "officialUm": 41
       },
+      "notes": "Montana snaps a four-game skein to Montana State with two first-half scores. Griz throw just five passes and use a 99-yard scoring drive that was started when Bob O'Billovich intercepts pass on 1-yard line. Cat QB Harry Lopsonzski passes to Bert Emery for team's only points.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly",
         "highF": 43,
@@ -3142,6 +3211,7 @@
         "officialMsu": 15,
         "officialUm": 41
       },
+      "notes": "Griz lead 9-0 in fourth quarter before Cats come back. Phil Schneider's field goal starts rally for Montana State. Bill Mulcahy recovers a fumble and later passes to Bill Cords for the tying score with 4:50 to play.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly",
         "highF": 45,
@@ -3186,6 +3256,7 @@
         "officialMsu": 15,
         "officialUm": 42
       },
+      "notes": "Terry Dillon, whose No. 22 is the first to be retired by UM, scores three touchdowns to wipe out a 13-0 deficit. Bucky May hits the end zone twice for Bobcats, the second on an interception return for a 19-14 halftime lead. This was the first game to be televised … to the Liberal Arts Building on the Missoula campus.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly",
         "highF": 50,
@@ -3231,7 +3302,7 @@
         "officialUm": 42
       },
       "bigSkyChampions": "Idaho State",
-      "notes": "The teams met as Big Sky members for the first time. Dan Sundling rushed for 144 yards and Ken Christison scored twice for Montana State.",
+      "notes": "It's the first Big Sky Conference meeting between the two teams. Dan Sundling rushes for 144 yards on 20 carries to hand Griz eighth consecutive loss of season. Ken Christison scores twice for Cats.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly",
         "highF": 55,
@@ -3279,6 +3350,7 @@
         "officialUm": 42
       },
       "bigSkyChampions": "Montana State",
+      "notes": "QB Foy McClung scores a touchdown, kicks a field goal and adds three extra points in relief effort of starter Ray Foley. Bobcats go on to win Camelia Bowl over Sacramento State.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly",
         "highF": 42,
@@ -3324,6 +3396,7 @@
         "officialUm": 42
       },
       "bigSkyChampions": "Idaho, Weber State",
+      "notes": "MSU kicker Jan Stenerud of Norway kicks a 59-yard field goal to open the scoring and later just misses from 67. Don Hass rushes for 129 yards and Jim Tuss returns a punt 80 yards for a touchdown. First game broadcast on television statewide.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly",
         "highF": 50,
@@ -3371,6 +3444,7 @@
         "officialUm": 42
       },
       "bigSkyChampions": "Montana State",
+      "notes": "Grizzlies shut out for first time since '28 and MSU earns first shutout win over UM since '08. The Bobcats are ranked third in the nation and are headed to the Camelia Bowl once again. Six different players score as QB Dennis Erickson pilots the victory. Hass runs for 141 yards and Gary Popiel takes a punt back 74 yards for a TD.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245735.dly",
         "highF": 42,
@@ -3417,6 +3491,7 @@
         "officialUm": 42
       },
       "bigSkyChampions": "Montana State",
+      "notes": "A goal-line stand at the 1-yard line helps the Bobcats to their fifth consecutive win in the series. Hass goes for 209 rushing yards and a touchdown. Bob Beers is in on 27 tackles for the Grizzlies.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly",
         "highF": 38,
@@ -3463,6 +3538,7 @@
         "officialUm": 42
       },
       "bigSkyChampions": "Montana State, Idaho, Weber State",
+      "notes": "Bobcats score 20 points the in final nine minutes and win when Paul Schafer scores with 12 seconds left. Schafer carries the ball 58 times, including the last six plays of the winning 67-yard drive. Brothers Doug (Griz) and Ron (Cats) Bain catch touchdown passes in the fourth quarter. Schafer piles up 234 rushing yards to help MSU back from a 24-9 fourth-quarter hole.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245735.dly",
         "highF": 42,
@@ -3510,6 +3586,7 @@
         "officialUm": 43
       },
       "bigSkyChampions": "Montana",
+      "notes": "Grizzlies win Big Sky when MSU's Frank Kalfoss misses a 42-yard field goal attempt with 25 seconds left. Cats have chance to go ahead early in the fourth quarter, but Gary Hughes fumbles at the 2-yard line and the ball goes out of the end zone, handing the ball back to the Griz.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly",
         "highF": 40,
@@ -3557,6 +3634,7 @@
         "officialUm": 44
       },
       "bigSkyChampions": "Montana",
+      "notes": "Montana leads just 7-0 at the half but pile it on thereafter to win its 19th consecutive regular season game. Griz go 10-0 for regular season, then lose in Camelia Bowl. MSU gains just four first downs.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245735.dly",
         "highF": 44,
@@ -3602,6 +3680,7 @@
         "officialUm": 45
       },
       "bigSkyChampions": "Idaho",
+      "notes": "In the final Cat-Griz game at Gatton Field, UM totals 420 rushing yards. Steve Caputo becomes Montana's first 1,000-yard rusher with 108 yards. It could have been more lopsided if not for Monte Boston's interception in the end zone for the Bobcats. Sonny Holland falls to UM in his first year as coach, but doesn't lose to them again.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly",
         "highF": 44,
@@ -3648,6 +3727,7 @@
         "officialUm": 45
       },
       "bigSkyChampions": "Montana State",
+      "notes": "Sam McCullum, a future NFL player, catches a pair of touchdown passes from Zoonie McLean. Bill Kollar keys the defense, which allows just Bob Turnquist's 42-yard field goal in the second quarter. ",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245735.dly",
         "highF": 46,
@@ -3693,6 +3773,7 @@
         "officialUm": 45
       },
       "bigSkyChampions": "Boise State",
+      "notes": "The Bobcats play Griz at Sales Stadium for the first time as more than 12,000 attend and see the home team score 20 points in the final quarter. Reserve QB Mike Holder replaces injured Mike Dunbar and runs for 144 yards. The Cats score on their first play of the game when Dunbar throws 76-yard pass to Don Bagley. Pat Bolton breaks Jan Stenerud's record for points in a season.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly",
         "highF": 67,
@@ -3738,6 +3819,7 @@
         "officialUm": 45
       },
       "bigSkyChampions": "Boise State",
+      "notes": "Steve Kracher runs for 163 yards as Bobcats set a record for points in the series. MSU has 387 rushing yards. Greg Anderson of the Griz returns a punt 72 yards and the second-half kickoff 95 yards, both for touchdowns.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245735.dly",
         "highF": 48,
@@ -3783,6 +3865,7 @@
         "officialUm": 45
       },
       "bigSkyChampions": "Boise State",
+      "notes": "Kracher runs for 165 yards in the 75th meeting. Holder throws two second-half touchdowns in front of 14,223 fans in Bozeman, the largest crowd to attend a sporting event in Montana. ",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly",
         "highF": 37,
@@ -3830,7 +3913,7 @@
         "officialUm": 45
       },
       "bigSkyChampions": "Montana State",
-      "notes": "Paul Dennehy threw a third-quarter touchdown pass and ran for two scores. Montana State went on to win the Division II national championship.",
+      "notes": "Paul Dennehy, who sat out most of the first half, throws a touchdown pass in the third quarter to give the Bobcats a 7-6 lead. Dennehy also rushes in for two scores as the Cats are on their way to the Division II national championship.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245735.dly",
         "highF": 54,
@@ -3876,6 +3959,7 @@
         "officialUm": 45
       },
       "bigSkyChampions": "Boise State",
+      "notes": "Sonny Holland finishes 6-1 against the Griz as a coach after going 4-0 as a player. MSU leads 17-0 on a Delmar Jones touchdown early in the fourth quarter. The Griz go ahead with three touchdowns before Ron Muri's interception sets up Dennehy's winning score. Jones gains 187 yards on the ground.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly",
         "highF": 58,
@@ -3921,6 +4005,7 @@
         "officialUm": 46
       },
       "bigSkyChampions": "Northern Arizona",
+      "notes": "Montana wins its first home game of season, defeating a Bobcat team that is ranked No. 4 in the country. In Sonny Lubick's first appearance in the series, MSU scores only on Scott Hoard's TD in the third quarter.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245735.dly",
         "highF": 61,
@@ -3967,6 +4052,7 @@
         "officialUm": 46
       },
       "bigSkyChampions": "Montana State (Boise State 7-0, but ineligible)",
+      "notes": "Missoula's Mike Doerfler runs for 167 yards and three touchdowns for Cats, who win Big Sky title. Stu Dodds recovers a fumble to set up a TD and later intercepts a pass that leads to MSU's final score.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly",
         "highF": 45,
@@ -4012,6 +4098,7 @@
         "officialUm": 46
       },
       "bigSkyChampions": "Boise State",
+      "notes": "Tony Boddie runs for 134 yards and two touchdowns for a 17-0 lead. Britt Freeman also reaches end zone on long pass from Barry Sullivan.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245735.dly",
         "highF": 54,
@@ -4057,6 +4144,7 @@
         "officialUm": 47
       },
       "bigSkyChampions": "Idaho State",
+      "notes": "Boddie's touchdown hands Bobcats the lead early in the first Halloween meeting since '13. Mike Hagen, however, scores three TDs later in first half to put Montana ahead for good.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly",
         "highF": 57,
@@ -4105,6 +4193,7 @@
         "officialUm": 48
       },
       "bigSkyChampions": "Montana State, Montana, Idaho",
+      "notes": "Marty Mornhinweg tosses four touchdown passes for UM, which piles up 527 yards. Si Timberman and Dale Halgren score for MSU.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245735.dly",
         "highF": 49,
@@ -4174,6 +4263,7 @@
         "officialUm": 48
       },
       "bigSkyChampions": "Nevada",
+      "notes": "MSU's only win of season comes against the Griz. Tyler Winter recovers a blocked punt in end zone for Bobcats, who enter game with an 0-8 record. More than 15,000 watch at Sales Stadium as Cat coach Dave Arnold lights victory cigar, the first he's smoked since he daughter was born eight years ago. “I got sick then,” he says. “I'll probably get sick this time too. But I really don't care.”",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly",
         "highF": 65,
@@ -4221,7 +4311,7 @@
         "officialUm": 48
       },
       "bigSkyChampions": "Montana State",
-      "notes": "David Pandt rushed for 118 yards after halftime as Montana State rallied from a 24–12 deficit. Mark Fellows had three sacks and an interception.",
+      "notes": "En route to a national championship, which comes five weeks later, Bobcats trail 24-12 at halftime in Missoula. David Pandt, however, rushes for 118 of his 140 yards in the second half and a Mark Fellows-led defense blanks the Griz after the intermission. Fellows has three sacks and an interception and Joe Bignell makes school-record 13 receptions.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245735.dly",
         "highF": 44,
@@ -4267,6 +4357,7 @@
         "officialUm": 48
       },
       "bigSkyChampions": "Idaho",
+      "notes": "MSU enters on five-game losing streak, including a 50-9 loss at Idaho State the prior week, but Jesse Jones runs for 136 yards. Bobcats finish 2-9. “The Streak” begins the following year.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly",
         "highF": 59,
@@ -4312,6 +4403,7 @@
         "officialUm": 49
       },
       "bigSkyChampions": "Nevada",
+      "notes": "With new coach Don Read, Griz open Washington-Grizzly Stadium and roll to 31-0 halftime lead. Shaun Shahan replaces Kelly Bradley at quarterback and throws touchdowns passes to Pat Bergman and Kelly Davis in final quarter. Cats don't beat Griz again until 2002.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245735.dly",
         "highF": 66,
@@ -4357,6 +4449,7 @@
         "officialUm": 50
       },
       "bigSkyChampions": "Idaho",
+      "notes": "UM blocks four punts, a Division I-AA record, key Griz victory in front of record crowd of 17,027 at Sales Stadium. Bobcats cross midfield just once in first half. John Tetreault's 41-yard run is MSU's only score.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly",
         "highF": 65,
@@ -4403,6 +4496,7 @@
         "officialUm": 51
       },
       "bigSkyChampions": "Idaho",
+      "notes": "Tim Hauck blocks his fourth punt of the season and Dwayne Hans picks it up and runs for a touchdown. Cats manage just 81 yards. Anders Larsson's field goal represents only points for MSU. ",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245735.dly",
         "highF": 46,
@@ -4449,6 +4543,7 @@
         "officialUm": 52
       },
       "bigSkyChampions": "Idaho",
+      "notes": "On a day that includes thunder, lightning, wind and hail, Bobcats lead 2-0 heading into final quarter. UM quarterback Grady Bennett, a former Bobcat, scores the go-ahead touchdown.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly",
         "highF": 54,
@@ -4494,6 +4589,7 @@
         "officialUm": 53
       },
       "bigSkyChampions": "Nevada",
+      "notes": "Bobcats score first touchdowns since '87 as Si Ryan ties game late in first half. Kevin Morris' interception return for a touchdown highlights second half for Griz.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245735.dly",
         "highF": 58,
@@ -4539,6 +4635,7 @@
         "officialUm": 54
       },
       "bigSkyChampions": "Nevada",
+      "notes": "Bobcats have chance to tie game late in first half, but an extra-point attempt is blocked by Chuck Mason. Cats drive to UM 6 in third quarterback, but throw an interception.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly",
         "highF": 9,
@@ -4584,6 +4681,7 @@
         "officialUm": 55
       },
       "bigSkyChampions": "Eastern Washington, Idaho",
+      "notes": "Griz lead 22-0 in first quarter behind Brad Lebo, who connects on 13 of his first 14 passes. Bozeman's Chad Mayer, a freshman, leads MSU on two scoring drives in final quarter. Lebo finishes with 410 passing yards.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245735.dly",
         "highF": 67,
@@ -4631,6 +4729,7 @@
         "officialUm": 56
       },
       "bigSkyChampions": "Montana",
+      "notes": "Dave Dickenson throws three TD passes and runs for a fourth. UM leads 28-3 in second quarter, but an 88-yard kickoff return by Sean Hill helps make it 35-24 in third. ",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly",
         "highF": 33,
@@ -4677,6 +4776,7 @@
         "officialUm": 57
       },
       "bigSkyChampions": "Boise State",
+      "notes": "Dickenson has ankle injury so Grizzlies turn to Bert Wilberger, who throws for 386 yards and three scores. Wilberger also rushes for two touchdowns on a day UM totals 613 yards. Eric Hopkins has 149 receiving yards and a TD for Cats.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245735.dly",
         "highF": 36,
@@ -4724,6 +4824,7 @@
         "officialUm": 58
       },
       "bigSkyChampions": "Montana",
+      "notes": "Grizzlies later win first national title, but trail 25-20 in fourth quarter. Dickenson throws three late touchdown passes, including one to Mike Erhardt for a 42-25 lead. Rob Compson responds with a TD pass, but is intercepted with 3:19 left.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly",
         "highF": 63,
@@ -4771,6 +4872,7 @@
         "officialUm": 59
       },
       "bigSkyChampions": "Montana",
+      "notes": "UM reaches 11-0 for the first time behind Joe Douglass, who has 205 receiving yards. Griz record nine sacks.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245735.dly",
         "highF": 26,
@@ -4817,6 +4919,7 @@
         "officialUm": 60
       },
       "bigSkyChampions": "Eastern Washington",
+      "notes": "The streak hits 12 in stunning fashion. Eric Kinnaman scores go-ahead touchdown for Bobcats with 22 seconds to go, but comes up short on 2-point conversion try. The ensuing kickoff goes out of bounds, setting up the Griz at their own 35. Brian Ah Yat hooks up with Justin Olsen at the Bobcat 19. After three timeouts with four seconds left, Kris Heppner takes the field and kicks a 37-yard field goal as time expires to break MSU's heart in Bozeman.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly",
         "highF": 42,
@@ -4864,6 +4967,7 @@
         "officialUm": 61
       },
       "bigSkyChampions": "Montana",
+      "notes": "Ah Yat throws to Dallas Neil for winning score with 5:21 to play. Ah Yat throws four scoring passes.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245735.dly",
         "highF": 45,
@@ -4911,6 +5015,7 @@
         "officialUm": 62
       },
       "bigSkyChampions": "Montana",
+      "notes": "Drew Miller throws for 305 yards and four touchdowns. It's the last game for head coaches Cliff Hysell (Bobcats) and Mick Dennehy (Griz) and one of the series' most lopsided. Yohance Humphery sets UM season record for rushing and Jeremy Watkins goes over 1,000-yard mark for receiving.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly",
         "highF": 53,
@@ -4958,6 +5063,7 @@
         "officialUm": 63
       },
       "bigSkyChampions": "Montana",
+      "notes": "In the 100th edition, John Edwards hits Jimmy Farris for a 91-yard touchdown, the longest in the series. Nate Cook's field goal is only scoring for Cats, who finish winless in Mike Kramer's first season as head coach.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245735.dly",
         "highF": 41,
@@ -5005,6 +5111,7 @@
         "officialUm": 64
       },
       "bigSkyChampions": "Montana",
+      "notes": "Ryan Johnson gives MSU early leads of 7-0 and 14-7 with touchdown runs of 3 and 6 yards. Nate Cook ties it at 17 with a field goal, but Humphery throws a pair of scoring passes in the third quarter for a 31-17 advantage. Cats get within a touchdown when Tyler Thomas hits Aaron Ware for a TD on fourth and goal. It's 31-27 after another Cook field goal, but Griz QB John Edwards seals UM with on a bootleg.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly",
         "highF": 56,
@@ -5054,7 +5161,7 @@
         "officialUm": 64
       },
       "bigSkyChampions": "Montana State, Montana, Idaho State",
-      "notes": "Freshman quarterback Travis Lulay threw a 53-yard touchdown pass to Junior Adams as Montana State ended Montana’s 16-game winning streak in the rivalry.",
+      "notes": "Travis Lulay, who was 2 years old the last time the Cats beat the Griz, helps Bobcats finally snap “The Streak” at 16 games. The true freshman's 53-yard scoring pass to Junior Adams lifts MSU to 10-0 lead in third quarter on cold, windy day in Missoula. UM cuts lead to three points in fourth but can't get past midfield the rest of the game. Bobcat safety Kane Ioane is more than relieved: “Just being able to go home now and not have to listen to everybody saying, when are you going to beat the Griz?' It's a huge monkey off our backs.”",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly",
         "highF": 45,
@@ -5104,6 +5211,7 @@
         "officialUm": 64
       },
       "bigSkyChampions": "Montana State, Montana, Northern Arizona",
+      "notes": "Corey Smith returns opening kickoff 90 yards for a touchdown as Bobcats win again, this time in Bozeman. Kenneth Qualls picks off Griz QB Craig Ochs and returns it 54 yards for a 13-10 lead at the half. MSU clinches win when Adam Cordeiro and Clive Lowe sack Ochs on fourth down with 2:09 left.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly",
         "highF": 11,
@@ -5151,6 +5259,7 @@
         "officialUm": 65
       },
       "bigSkyChampions": "Eastern Washington, Montana",
+      "notes": "Lulay throws touchdown pass, while in punt formation, to Rick Gatewood to make it 7-7, but Jefferson Heidelberger's 131 receiving yards and two touchdowns lead Griz. Gatewood sets series record with 235 receiving yards.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly",
         "highF": 40,
@@ -5199,6 +5308,7 @@
         "officialUm": 65
       },
       "bigSkyChampions": "Eastern Washington, Montana State, Montana",
+      "notes": "Lulay cements legacy with his third win over Grizzlies in four years and Evin Groves runs for 143 yards. Jeff Hastings kicks three field goals as MSU reaches red zone four times in first half, but only manages 16 points. At final whistle, fans storm muddy Bobcat Stadium field and tear down goal posts, the last time that tradition is carried out; school installs collapsable uprights the following year.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly",
         "highF": 49,
@@ -5247,6 +5357,7 @@
         "officialUm": 66
       },
       "bigSkyChampions": "Montana",
+      "notes": "In one of the most physical games in series history, MSU receiver Michael Jefferson has his helmet knocked off after hit in middle of the field. Cats nearly pull off comeback when Andre Fuller picks off Josh Swogger at UM 40 with four minutes to go, but drive ends on downs at 25. Bobcats surprisingly make playoffs with 7-4 record and host first postseason game in 22 years, where they defeat Furman 31-13.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245735.dly",
         "highF": 45,
@@ -5294,6 +5405,7 @@
         "officialUm": 67
       },
       "bigSkyChampions": "Montana",
+      "notes": "In MSU coach Rob Ash's first game vs. Grizzlies, UM finishes 11-0 season behind Lex Hilliard's 181 yards and three touchdowns. Demetrius Crawford rushes for 115 yards and two scores and Jack Rolovich amasses 240 yards through the air.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly",
         "highF": 53,
@@ -5341,6 +5453,7 @@
         "officialUm": 68
       },
       "bigSkyChampions": "Montana, Weber State",
+      "notes": "UM ignites crowd by taking field with yellow helmets for the first time since 1995 and use five MSU turnovers. Crawford breaks off 84-yard run on second play of game, but Cats are held on downs. Griz take lead for good when Marc Mariani returns punt 75 yards for a score.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245735.dly",
         "highF": 39,
@@ -5388,6 +5501,7 @@
         "officialUm": 69
       },
       "bigSkyChampions": "Montana",
+      "notes": "Each team scores a safety and Griz finish 11-0 again. UM leads 9-5 at halftime, then scores quickly to make it 26-5. Joe Schreibeis scores first collegiate touchdown for Bobcats.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly",
         "highF": 50,
@@ -5435,6 +5549,7 @@
         "officialUm": 69
       },
       "bigSkyChampions": "Eastern Washington, Montana State",
+      "notes": "Orenzo Davis runs for 140 yards and the Grizzlies fumble twice inside MSU's 5-yard line in the second half as the Bobcats win at Washington-Grizzly Stadium for just the second time. Just two points are scored in the second half as wind and snow pound the field. The Bobcats wanted to wear gold jerseys, but UM said no. After Michael Rider's game_clinching interception, the uniforms came out as MSU celebrated winning the Big Sky title. “Gold is for champions,” head coach Rob Ash says.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly",
         "highF": 24,
@@ -5484,7 +5599,7 @@
         "officialUm": 69
       },
       "bigSkyChampions": "Montana State, Montana",
-      "notes": "Peter Nguyen and Dan Moore each rushed for more than 100 yards and scored a touchdown for Montana.",
+      "notes": "Both teams entered the game ranked in the national polls — the ‘Cats No. 1, and the Griz No. 7 — but the University of Montana running game dominated. Peter Nguyen rushed for 123 yards and a touchdown and Dan Moore added 116 yards and another score. Averaging more than 36 points a game, the ‘Cats sported the country’s top-rated offense entering the game, but managed just a season-low 250 total yards. Both teams qualified for the national playoffs, with the Grizzlies reaching the semi-finals and the ‘Cats getting as far as the quarterfinal round. UM later vacated the win after an NCAA investigation.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly",
         "highF": 15,
@@ -5532,6 +5647,7 @@
         "officialUm": 69
       },
       "bigSkyChampions": "Cal Poly, Eastern Washington, Montana State",
+      "notes": "UM took an early lead after a first-quarter touchdown, but MSU didn't give up any more points. Kruiz Siewing from Saco, Montana, scored MSU's only touchdown on a pass from quarterback DeNarius McGhee. Rory Perez kicked three field goals for the Cats, his last to clinch the game with just 2:32 to play. The season marked UM's first losing season since moving in to Washington-Grizzly Stadium in 1986. The Grizzlies finished with a 5-6 record.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly",
         "highF": 54,
@@ -5578,6 +5694,7 @@
         "officialUm": 70
       },
       "bigSkyChampions": "Eastern Washington",
+      "notes": "MSU entered the game desperate for a win to procure a FCS postseason berth but instead dropped their third game in a row, their longest losing streak since 2006, to cap a stunning late-season collapse. UM quarterback Jordan Johnson scored 21 second-half points, while MSU squandered opportunities and racked up untimely miscues -- including a critical fourth-quarter fumble by senior Cody Kirk.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly",
         "highF": 30,
@@ -5625,6 +5742,7 @@
         "officialUm": 71
       },
       "bigSkyChampions": "Eastern Washington",
+      "notes": "In a one-sided, brutal, definitive mauling at Washington-Grizzly Stadium, MSU turned the ball over on five of its first six possessions, opportunities the Griz turned into five first-half scores before riding its fierce defense to an emphatic win.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly",
         "highF": 45,
@@ -5671,6 +5789,7 @@
         "officialUm": 72
       },
       "bigSkyChampions": "Southern Utah",
+      "notes": "The Griz erupted for 31 consecutive first-half points, and though the Cats pulled to within 15 points in the third quarter, it wasn't enough to overcome the penalties against them - 13 in all totaling 120 yards. The Bozeman crowd watched a protracted Griz drive that scored another 7 points, dashing the home team's hope for victory.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly",
         "highF": 32,
@@ -5716,6 +5835,7 @@
         "officialUm": 72
       },
       "bigSkyChampions": "Eastern Washington, North Dakota",
+      "notes": "A surprise pass by MSU on fourth-and-1 during the final 2 minutes let the Bobcats to kneel their way to an upset, stunning the occupants of Washington-Grizzly Stadium, who could only stare as the last seconds ran out.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly",
         "highF": 42,
@@ -5761,6 +5881,7 @@
         "officialUm": 72
       },
       "bigSkyChampions": "Southern Utah, Weber State",
+      "notes": "MSU's running game was key to this second-straight Brawl victory, the first repeat for MSU since 2002-03. MSU's Nick LaSane ran for 121 yards and a touchdown; Troy Anderson ran for two TDs, and quarterback Chris Murray rushed for more than 100 yards, contributing to MSU's 322 ground yards.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly",
         "highF": 35,
@@ -5807,6 +5928,7 @@
         "officialUm": 72
       },
       "bigSkyChampions": "Eastern Washington",
+      "notes": "Dubbed the Miracle in Missoula, the game came down to a final play with 14 seconds left. MSU head coach Jeff Choate wanted a look at the Griz defense before the play and called for a stoppage before play resumed, so what appeared to be a game-winning Griz TD was called back. The Cat defense then forced a fumble, recovered it and took victory from the 26,508 fans watching in Washington-Grizzly Stadium.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly",
         "highF": 36,
@@ -5854,6 +5976,7 @@
         "officialUm": 72
       },
       "bigSkyChampions": "Sacramento State, Weber State, UC Davis",
+      "notes": "MSU won its fourth in a row against UM in decisive fashion at Bobcat Stadium, dominating the visiting team from the start. Going in, UM had not scored fewer than 22 points against an FCS opponent, but the Bobcats scored 24 points within the first 19 minutes. And though the Grizzlies teased a comeback at various points, the Bobcat defense forced turnovers and sacked UM's quarterback five times on its way to victory.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly",
         "highF": 48,
@@ -5869,7 +5992,7 @@
       "location": null,
       "msuScore": null,
       "umScore": null,
-      "notes": "The game was canceled during the COVID-19 pandemic."
+      "notes": "No game was held due to the COVID-19 pandemic."
     },
     {
       "id": "2021-1",
@@ -5910,6 +6033,7 @@
         "officialUm": 73
       },
       "bigSkyChampions": "Sacramento State",
+      "notes": "The Grizzlies struck first and early and out-gained the Bobcats throughout the first half by a wide margin. MSU's lone touchdown came in the game's final minute.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly",
         "highF": 40,
@@ -5958,6 +6082,7 @@
         "officialUm": 73
       },
       "bigSkyChampions": "Montana State, Sacramento State",
+      "notes": "MSU hosted ESPN College GameDay for the first time in state history and defeated the Griz on the way to play for the national championship in Frisco.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly",
         "highF": 13,
@@ -6006,6 +6131,7 @@
         "officialUm": 74
       },
       "bigSkyChampions": "Montana",
+      "notes": "The Griz defeated the Cats en route to their appearance in the national championship.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USC00245740.dly",
         "highF": 33,
@@ -6054,7 +6180,7 @@
         "officialUm": 74
       },
       "bigSkyChampions": "Montana State",
-      "notes": "Missoula native Adam Jones ran for 197 yards and two touchdowns as Montana State reclaimed the Great Divide Trophy and completed a 12–0 regular season.",
+      "notes": "Montana State reclaimed the rivalry trophy in Bozeman behind Missoula native Adam Jones, who rushed for 197 yards and two touchdowns. Tommy Mellott added a rushing touchdown and a 35-yard touchdown pass to Rohan Jones as the Bobcats built a 20–3 halftime lead. MSU finished with 326 rushing yards and held Montana to 234 total yards. The victory completed the first 12–0 regular season in Bobcat history and secured the outright Big Sky championship with an 8–0 conference record.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly",
         "highF": 53,
@@ -6127,7 +6253,7 @@
         "officialUm": 74
       },
       "bigSkyChampions": "Montana State",
-      "notes": "Caden Dowler returned an interception 34 yards for a touchdown to put Montana State ahead in the third quarter. The Bobcats held on for their first win in Missoula since 2018.",
+      "notes": "Montana State won a back-and-forth battle in Missoula to claim the outright Big Sky championship and hand Montana its first loss of the season. Caden Dowler’s 34-yard interception return for a touchdown put the Bobcats ahead 24–21 late in the third quarter. After Zac Crews blocked a potential tying field goal, Justin Lamson’s 23-yard touchdown run extended the lead. Montana’s Eli Gillman answered with a 52-yard scoring run, but MSU controlled the remaining possession to seal its first victory in Missoula since 2018.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024153.dly",
         "highF": 45,
@@ -6176,7 +6302,7 @@
         "officialUm": 74
       },
       "bigSkyChampions": "Montana State",
-      "notes": "Montana erased a 20–3 deficit to take a third-quarter lead. Montana State scored the final 28 points and finished with 449 total yards to advance to the national championship.",
+      "notes": "The rivals met again four weeks later in an FCS semifinal in Bozeman. Montana erased a 20–3 deficit to take a 23–20 third-quarter lead, but Montana State scored the final 28 points, including 21 in the fourth quarter, to advance to the national championship game. Justin Lamson passed for 209 yards and two touchdowns, Adam Jones rushed for 131 yards and two scores, and Taco Dowler caught five passes for 125 yards. The Bobcats finished with 449 total yards to Montana’s 347.",
       "weather": {
         "source": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00024132.dly",
         "highF": 35,
@@ -6221,7 +6347,7 @@
         "officialUm": 74
       },
       "bigSkyChampions": "Montana State",
-      "notes": "Montana State scored touchdowns on all five second-half possessions and finished with 582 total yards. Justin Lamson threw for 265 yards and three touchdowns and ran for another 123 yards.",
+      "notes": "Montana State turned a 7–3 halftime lead into a 42–16 win in Bozeman, scoring touchdowns on all five second-half possessions to claim its third straight outright Big Sky championship. Adam Jones opened the half with a 9-yard touchdown run, and Takhari Carr intercepted Montana in the end zone before Justin Lamson found Carter Dahlke for an 11-yard score. Lamson passed for 265 yards and three touchdowns and ran for 123 yards. Two of his touchdown passes went to Rocky Lencioni, including a 75-yarder on the first play after Montana cut the lead to 21–10. The Bobcats finished with 582 total yards. The official box score lists snow and 24°F at kickoff. The National Weather Service reported overcast skies, calm winds, and 25°F at Bozeman Gallatin Field Airport at 1:56 p.m. MST.",
       "weather": {
         "source": "https://msubobcats.com/news/2026/11/21/football-big-second-half-lifts-bobcats-past-grizzlies",
         "kickoffF": 24,

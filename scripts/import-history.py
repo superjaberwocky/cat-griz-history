@@ -4,6 +4,7 @@ import json
 import re
 from collections import Counter
 from datetime import date
+from html import unescape
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -21,23 +22,11 @@ INTERRUPTIONS = {
 }
 TEAMS = {'MSU': 'Montana State', 'UM': 'Montana', 'EWU': 'Eastern Washington'}
 
-# Selected game stories from the original archive, edited against the CSV.
-STORIES = {
-    '1897-1': 'Montana won the first meeting in Missoula. The original archive puts the crowd at about 200.',
-    '1898-1': 'The original archive describes a crowd of about 700 at Butler Field in Bozeman, where there were no bleachers.',
-    '1909-1': 'Ed Winstanley kicked the only field goal of the game to give Montana a 3–0 win.',
-    '1919-1': 'The teams played to a 6–6 tie in their first meeting after World War I.',
-    '1926-1': 'In the first Butte meeting, Kelly returned a punt for a touchdown and kicked three extra points for Montana.',
-    '1963-1': 'The teams met as Big Sky members for the first time. Dan Sundling rushed for 144 yards and Ken Christison scored twice for Montana State.',
-    '1976-1': 'Paul Dennehy threw a third-quarter touchdown pass and ran for two scores. Montana State went on to win the Division II national championship.',
-    '1984-1': 'David Pandt rushed for 118 yards after halftime as Montana State rallied from a 24–12 deficit. Mark Fellows had three sacks and an interception.',
-    '2002-1': 'Freshman quarterback Travis Lulay threw a 53-yard touchdown pass to Junior Adams as Montana State ended Montana’s 16-game winning streak in the rivalry.',
-    '2011-1': 'Peter Nguyen and Dan Moore each rushed for more than 100 yards and scored a touchdown for Montana.',
-    '2024-1': 'Missoula native Adam Jones ran for 197 yards and two touchdowns as Montana State reclaimed the Great Divide Trophy and completed a 12–0 regular season.',
-    '2025-1': 'Caden Dowler returned an interception 34 yards for a touchdown to put Montana State ahead in the third quarter. The Bobcats held on for their first win in Missoula since 2018.',
-    '2025-2': 'Montana erased a 20–3 deficit to take a third-quarter lead. Montana State scored the final 28 points and finished with 449 total yards to advance to the national championship.',
-    '2026-1': 'Montana State scored touchdowns on all five second-half possessions and finished with 582 total yards. Justin Lamson threw for 265 yards and three touchdowns and ran for another 123 yards.',
-}
+# The original archive groups its narratives by year. Later recaps identify individual games.
+original_archive = json.loads((SOURCE / 'cat-griz.json').read_text(encoding='utf-8'))
+year_notes = {game['year']: unescape(game['narrative']) for game in original_archive['games']}
+recent_updates = json.loads((SOURCE / 'updates.json').read_text(encoding='utf-8'))
+game_notes = {game['id']: game['notes'] for game in recent_updates['games']}
 
 with (SOURCE / CSV_NAME).open(encoding='utf-8-sig', newline='') as stream:
     reader = csv.reader(stream)
@@ -135,8 +124,12 @@ for row in rows:
     champions = clean(row['Big Sky Champions'])
     if champions:
         game['bigSkyChampions'] = re.sub(r'\b(MSU|UM|EWU)\b', lambda match: TEAMS[match[0]], champions)
-    if game_id in STORIES:
-        game['notes'] = STORIES[game_id]
+    if game_id in game_notes:
+        game['notes'] = game_notes[game_id]
+    elif year in year_notes:
+        game['notes'] = year_notes[year]
+        if game['gamesInYear'] > 1:
+            game['notesScope'] = 'year'
     observations = weather(row)
     if observations:
         game['weather'] = observations
@@ -150,7 +143,7 @@ for year, note in INTERRUPTIONS.items():
         records.append({
             'id': f'{year}-1', 'year': year, 'status': 'not-played',
             'location': None, 'msuScore': None, 'umScore': None,
-            'notes': note,
+            'notes': year_notes.get(year, note),
         })
 
 # The CSV's source lists are largely identical; show a single set of reading links.

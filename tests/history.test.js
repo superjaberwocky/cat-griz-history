@@ -96,6 +96,17 @@ test('both meetings in 1898 are searchable and independently filterable',()=>{
   assert.equal(filterGames(archive.games,{search:'1898',team:'um'}).length,2);
 });
 
+test('original narratives are restored and shared by meetings in the same year', () => {
+  const played = archive.games.filter(game => game.status === 'played');
+  assert.ok(played.every(game => game.notes?.trim()));
+  assert.match(played[0].notes, /the “Varsity” wins/);
+  const meetings = played.filter(game => game.year === 1898);
+  assert.deepEqual(meetings.map(game => game.notesScope), ['year', 'year']);
+  assert.equal(meetings[0].notes, meetings[1].notes);
+  assert.match(meetings[0].notes, /Butler Field/);
+  assert.equal(played.find(game => game.id === '2025-2').notesScope, undefined);
+});
+
 test('recent updates preserve separate meetings, locations, notes, and chronology',()=>{
   assert.equal(archive.updatedThrough,2026);
   const recent = filterGames(archive.games).slice(0,4);
